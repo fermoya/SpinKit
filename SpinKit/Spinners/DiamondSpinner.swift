@@ -9,14 +9,12 @@
 import UIKit
 
 class DiamondSpinner: Spinner {
-
-//    private var diamondLayer = CATextLayer()
     
     private var firstDiamondLayer = CAShapeLayer()
     private var secondDiamondLayer = CAShapeLayer()
-    private var rowReplicatorLayer = CAReplicatorLayer()
-    private var replicatorLayer = CAReplicatorLayer()
-
+    private var firstReplicatorLayer = CAReplicatorLayer()
+    private var secondReplicatorLayer = CAReplicatorLayer()
+    
     override func didMoveToWindow() {
         super.didMoveToWindow()
         
@@ -25,19 +23,21 @@ class DiamondSpinner: Spinner {
         secondDiamondLayer.fillColor = UIColor.lightBlue.cgColor
         secondDiamondLayer.strokeColor = UIColor.lightBlue.cgColor
         
-        replicatorLayer.instanceCount = 2
-        rowReplicatorLayer.instanceCount = 2
-        
 //        diamondLayer.string = "1"
 //        rowReplicatorLayer.instanceGreenOffset = -1
 //        replicatorLayer.instanceRedOffset = -1
 //        replicatorLayer.instanceGreenOffset = -0.7
 //        replicatorLayer.instanceBlueOffset = -0.3
         
-        rowReplicatorLayer.addSublayer(secondDiamondLayer)
-        rowReplicatorLayer.addSublayer(firstDiamondLayer)
-        replicatorLayer.addSublayer(rowReplicatorLayer)
-        layer.addSublayer(replicatorLayer)
+        firstReplicatorLayer.instanceCount = 4
+        firstReplicatorLayer.addSublayer(firstDiamondLayer)
+        
+        secondReplicatorLayer.instanceCount = 3
+        secondReplicatorLayer.addSublayer(secondDiamondLayer)
+        
+        layer.addSublayer(firstReplicatorLayer)
+        layer.addSublayer(secondReplicatorLayer)
+        
         transform = CGAffineTransform(rotationAngle: .pi / 4)
     }
     
@@ -49,35 +49,37 @@ class DiamondSpinner: Spinner {
         firstDiamondLayer.path = UIBezierPath(rect: diamondFrame).cgPath
         firstDiamondLayer.anchorPoint.x = 1
         
-        secondDiamondLayer.frame = diamondFrame
-        secondDiamondLayer.path = UIBezierPath(rect: diamondFrame).cgPath
-        secondDiamondLayer.anchorPoint.x = 1
+        secondDiamondLayer.frame = firstDiamondLayer.frame
+        secondDiamondLayer.path = firstDiamondLayer.path
+        secondDiamondLayer.anchorPoint.x = firstDiamondLayer.anchorPoint.x
         
-        replicatorLayer.frame = bounds
-        
-        rowReplicatorLayer.instanceTransform = CATransform3DConcat(CATransform3DTranslate(CATransform3DIdentity, 0, -2 * diamondFrame.height, 0),
-                                                                   CATransform3DRotate(CATransform3DIdentity, .pi / 2, 0, 0, 1))
-        replicatorLayer.instanceTransform = CATransform3DRotate(CATransform3DIdentity, .pi, 0, 0, 1)
+        firstReplicatorLayer.frame = bounds
+        secondReplicatorLayer.frame = bounds
+
+        firstReplicatorLayer.instanceTransform = CATransform3DRotate(CATransform3DIdentity, .pi / 2, 0, 0, 1)
+        secondReplicatorLayer.instanceTransform = firstReplicatorLayer.instanceTransform
     }
     
     override func startLoading() {
         super.startLoading()
         
         let totalDuration: Double = 8
-        let delayFactor = 0.4
-        let individualDuration = totalDuration / Double(rowReplicatorLayer.instanceCount * replicatorLayer.instanceCount * rowReplicatorLayer.sublayers!.count)
+        let delayFactor = 0.2
+
+        let effectiveDuration = (1 - delayFactor) * totalDuration
+        let individualDuration = effectiveDuration / Double(2 * firstReplicatorLayer.instanceCount)
         
         secondDiamondLayer.opacity = 0
         
-        let fadeInAnim = CABasicAnimation(keyPath: "opacity")
-        fadeInAnim.fromValue = 1
-        fadeInAnim.toValue = 0
-        fadeInAnim.fillMode = .forwards
-        fadeInAnim.duration = individualDuration
+        let opacity = CABasicAnimation(keyPath: "opacity")
+        opacity.fromValue = 1
+        opacity.toValue = 0
+        opacity.fillMode = .forwards
+        opacity.duration = individualDuration
         
         let fadeInWrapper = CAAnimationGroup()
-        fadeInWrapper.animations = [fadeInAnim]
-        fadeInWrapper.duration = totalDuration / 2
+        fadeInWrapper.animations = [opacity]
+        fadeInWrapper.duration = effectiveDuration / 2
         
         let colorAnim = CAKeyframeAnimation(keyPath: "fillColor")
         colorAnim.values = [UIColor.lightBlue.cgColor, UIColor.darkBlue.cgColor, UIColor.lightBlue.cgColor]
@@ -93,12 +95,12 @@ class DiamondSpinner: Spinner {
         rotateAnim.timingFunction = CAMediaTimingFunction(name: .linear)
         rotateAnim.duration = individualDuration
         
-        rowReplicatorLayer.instanceDelay = rotateAnim.duration
-        replicatorLayer.instanceDelay = 2 * rowReplicatorLayer.instanceDelay
+        firstReplicatorLayer.instanceDelay = individualDuration
+        secondReplicatorLayer.instanceDelay = individualDuration
         
         let firstAnimGroup = CAAnimationGroup()
         firstAnimGroup.animations = [fadeInWrapper, rotateAnim, colorAnim]
-        firstAnimGroup.duration = (1 + delayFactor) * totalDuration
+        firstAnimGroup.duration = totalDuration
         firstAnimGroup.repeatCount = .infinity
         
         firstDiamondLayer.add(firstAnimGroup, forKey: nil)
@@ -115,9 +117,9 @@ class DiamondSpinner: Spinner {
         fadeOutWrapper.animations = [fadeOutAnim]
         fadeOutWrapper.duration = fadeInWrapper.duration
         
-        secondAnimGroup.animations = [fadeOutWrapper, rotateAnim]
-        secondAnimGroup.duration = (1 + delayFactor) * totalDuration
-        secondAnimGroup.beginTime = CACurrentMediaTime() + totalDuration / 2
+        secondAnimGroup.animations = [fadeOutWrapper, rotateAnim, colorAnim]
+        secondAnimGroup.duration = totalDuration
+        secondAnimGroup.beginTime = CACurrentMediaTime() + effectiveDuration / 2
         secondAnimGroup.repeatCount = .infinity
         
         secondDiamondLayer.add(secondAnimGroup, forKey: nil)
