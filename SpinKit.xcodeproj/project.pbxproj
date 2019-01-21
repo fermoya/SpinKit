@@ -9,19 +9,45 @@
 /* Begin PBXBuildFile section */
 		B00AB9EA21EF3D8B00FC9FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AB9E921EF3D8B00FC9FBD /* AppDelegate.swift */; };
 		B00AB9EC21EF3D8B00FC9FBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AB9EB21EF3D8B00FC9FBD /* ViewController.swift */; };
-		B00AB9EF21EF3D8B00FC9FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00AB9ED21EF3D8B00FC9FBD /* Main.storyboard */; };
 		B00AB9F121EF3D8C00FC9FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00AB9F021EF3D8C00FC9FBD /* Assets.xcassets */; };
 		B00AB9F421EF3D8C00FC9FBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00AB9F221EF3D8C00FC9FBD /* LaunchScreen.storyboard */; };
+		B00AB9FC21EF3F1700FC9FBD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B00AB9FB21EF3F1700FC9FBD /* ViewController.xib */; };
+		B00ABA0021EF41AD00FC9FBD /* SquareFlipSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AB9FF21EF41AD00FC9FBD /* SquareFlipSpinner.swift */; };
+		B00ABA0221EF86D000FC9FBD /* CirclesSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ABA0121EF86D000FC9FBD /* CirclesSpinner.swift */; };
+		B00ABA0421EF87AA00FC9FBD /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ABA0321EF87AA00FC9FBD /* Spinner.swift */; };
+		B00ABA0621EF87C700FC9FBD /* UIColor+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ABA0521EF87C700FC9FBD /* UIColor+Spinner.swift */; };
+		B00ABA0921EF927A00FC9FBD /* BarSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ABA0821EF927A00FC9FBD /* BarSpinner.swift */; };
+		B0BF426B21F0779B003FC841 /* DoubleSquareSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF426A21F0779B003FC841 /* DoubleSquareSpinner.swift */; };
+		B0BF426D21F088EF003FC841 /* RadarSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF426C21F088EF003FC841 /* RadarSpinner.swift */; };
+		B0BF426F21F08CEC003FC841 /* BubblesSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF426E21F08CEC003FC841 /* BubblesSpinner.swift */; };
+		B0BF427121F0A4AB003FC841 /* DotsSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427021F0A4AB003FC841 /* DotsSpinner.swift */; };
+		B0BF427321F0CE25003FC841 /* FancySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427221F0CE25003FC841 /* FancySpinner.swift */; };
+		B0BF427521F0FDCB003FC841 /* DecomposeSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427421F0FDCB003FC841 /* DecomposeSpinner.swift */; };
+		B0BF427721F108E5003FC841 /* ClassicSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427621F108E5003FC841 /* ClassicSpinner.swift */; };
+		B0BF427921F10BAE003FC841 /* DiamondSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427821F10BAE003FC841 /* DiamondSpinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B00AB9E621EF3D8B00FC9FBD /* SpinKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpinKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00AB9E921EF3D8B00FC9FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B00AB9EB21EF3D8B00FC9FBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B00AB9EE21EF3D8B00FC9FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B00AB9F021EF3D8C00FC9FBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B00AB9F321EF3D8C00FC9FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B00AB9F521EF3D8C00FC9FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B00AB9FB21EF3F1700FC9FBD /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		B00AB9FF21EF41AD00FC9FBD /* SquareFlipSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareFlipSpinner.swift; sourceTree = "<group>"; };
+		B00ABA0121EF86D000FC9FBD /* CirclesSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesSpinner.swift; sourceTree = "<group>"; };
+		B00ABA0321EF87AA00FC9FBD /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		B00ABA0521EF87C700FC9FBD /* UIColor+Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Spinner.swift"; sourceTree = "<group>"; };
+		B00ABA0821EF927A00FC9FBD /* BarSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarSpinner.swift; sourceTree = "<group>"; };
+		B0BF426A21F0779B003FC841 /* DoubleSquareSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleSquareSpinner.swift; sourceTree = "<group>"; };
+		B0BF426C21F088EF003FC841 /* RadarSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarSpinner.swift; sourceTree = "<group>"; };
+		B0BF426E21F08CEC003FC841 /* BubblesSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesSpinner.swift; sourceTree = "<group>"; };
+		B0BF427021F0A4AB003FC841 /* DotsSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsSpinner.swift; sourceTree = "<group>"; };
+		B0BF427221F0CE25003FC841 /* FancySpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancySpinner.swift; sourceTree = "<group>"; };
+		B0BF427421F0FDCB003FC841 /* DecomposeSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecomposeSpinner.swift; sourceTree = "<group>"; };
+		B0BF427621F108E5003FC841 /* ClassicSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicSpinner.swift; sourceTree = "<group>"; };
+		B0BF427821F10BAE003FC841 /* DiamondSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiamondSpinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +81,50 @@
 			isa = PBXGroup;
 			children = (
 				B00AB9E921EF3D8B00FC9FBD /* AppDelegate.swift */,
-				B00AB9EB21EF3D8B00FC9FBD /* ViewController.swift */,
-				B00AB9ED21EF3D8B00FC9FBD /* Main.storyboard */,
 				B00AB9F021EF3D8C00FC9FBD /* Assets.xcassets */,
 				B00AB9F221EF3D8C00FC9FBD /* LaunchScreen.storyboard */,
 				B00AB9F521EF3D8C00FC9FBD /* Info.plist */,
+				B00AB9FD21EF3F2800FC9FBD /* Controllers */,
+				B00AB9FE21EF412800FC9FBD /* Spinners */,
+				B00ABA0721EF87CD00FC9FBD /* Extensions */,
 			);
 			path = SpinKit;
+			sourceTree = "<group>";
+		};
+		B00AB9FD21EF3F2800FC9FBD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B00AB9EB21EF3D8B00FC9FBD /* ViewController.swift */,
+				B00AB9FB21EF3F1700FC9FBD /* ViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B00AB9FE21EF412800FC9FBD /* Spinners */ = {
+			isa = PBXGroup;
+			children = (
+				B00ABA0321EF87AA00FC9FBD /* Spinner.swift */,
+				B00AB9FF21EF41AD00FC9FBD /* SquareFlipSpinner.swift */,
+				B00ABA0121EF86D000FC9FBD /* CirclesSpinner.swift */,
+				B00ABA0821EF927A00FC9FBD /* BarSpinner.swift */,
+				B0BF426A21F0779B003FC841 /* DoubleSquareSpinner.swift */,
+				B0BF426C21F088EF003FC841 /* RadarSpinner.swift */,
+				B0BF426E21F08CEC003FC841 /* BubblesSpinner.swift */,
+				B0BF427021F0A4AB003FC841 /* DotsSpinner.swift */,
+				B0BF427221F0CE25003FC841 /* FancySpinner.swift */,
+				B0BF427421F0FDCB003FC841 /* DecomposeSpinner.swift */,
+				B0BF427621F108E5003FC841 /* ClassicSpinner.swift */,
+				B0BF427821F10BAE003FC841 /* DiamondSpinner.swift */,
+			);
+			path = Spinners;
+			sourceTree = "<group>";
+		};
+		B00ABA0721EF87CD00FC9FBD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B00ABA0521EF87C700FC9FBD /* UIColor+Spinner.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B00AB9F421EF3D8C00FC9FBD /* LaunchScreen.storyboard in Resources */,
+				B00AB9FC21EF3F1700FC9FBD /* ViewController.xib in Resources */,
 				B00AB9F121EF3D8C00FC9FBD /* Assets.xcassets in Resources */,
-				B00AB9EF21EF3D8B00FC9FBD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +198,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BF427921F10BAE003FC841 /* DiamondSpinner.swift in Sources */,
+				B0BF426B21F0779B003FC841 /* DoubleSquareSpinner.swift in Sources */,
+				B00ABA0921EF927A00FC9FBD /* BarSpinner.swift in Sources */,
 				B00AB9EC21EF3D8B00FC9FBD /* ViewController.swift in Sources */,
+				B0BF427121F0A4AB003FC841 /* DotsSpinner.swift in Sources */,
+				B0BF427721F108E5003FC841 /* ClassicSpinner.swift in Sources */,
+				B00ABA0621EF87C700FC9FBD /* UIColor+Spinner.swift in Sources */,
+				B0BF426D21F088EF003FC841 /* RadarSpinner.swift in Sources */,
+				B00ABA0021EF41AD00FC9FBD /* SquareFlipSpinner.swift in Sources */,
 				B00AB9EA21EF3D8B00FC9FBD /* AppDelegate.swift in Sources */,
+				B0BF426F21F08CEC003FC841 /* BubblesSpinner.swift in Sources */,
+				B00ABA0221EF86D000FC9FBD /* CirclesSpinner.swift in Sources */,
+				B0BF427321F0CE25003FC841 /* FancySpinner.swift in Sources */,
+				B0BF427521F0FDCB003FC841 /* DecomposeSpinner.swift in Sources */,
+				B00ABA0421EF87AA00FC9FBD /* Spinner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B00AB9ED21EF3D8B00FC9FBD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B00AB9EE21EF3D8B00FC9FBD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B00AB9F221EF3D8C00FC9FBD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
