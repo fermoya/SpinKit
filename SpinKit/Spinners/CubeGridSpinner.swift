@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DecomposeSpinner: Spinner {
+class CubeGridSpinner: Spinner {
 
     private var squareLayer = CAShapeLayer()
     private var rowReplicatorLayer = CAReplicatorLayer()
@@ -21,14 +21,18 @@ class DecomposeSpinner: Spinner {
     override func didMoveToWindow() {
         super.didMoveToWindow()
         
-        squareLayer.fillColor = UIColor.darkBlue.cgColor
-        squareLayer.strokeColor = squareLayer.fillColor
         rowReplicatorLayer.instanceCount = 3
         replicatorLayer.instanceCount = 3
         
         rowReplicatorLayer.addSublayer(squareLayer)
         replicatorLayer.addSublayer(rowReplicatorLayer)
         layer.addSublayer(replicatorLayer)
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        squareLayer.fillColor = primaryColor.cgColor
+        squareLayer.strokeColor = squareLayer.fillColor
     }
     
     override func layoutSubviews() {

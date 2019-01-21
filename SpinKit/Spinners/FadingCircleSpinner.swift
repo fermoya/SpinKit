@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClassicSpinner: FancySpinner {
+class FadingCircleSpinner: CircleSpinner {
 
     override func startLoading() {
         let scaleAnim = CABasicAnimation(keyPath: "opacity")

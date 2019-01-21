@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DiamondSpinner: Spinner {
+class FoldingCubeSpinner: DoubleColorSpinner {
     
     private var firstDiamondLayer = CAShapeLayer()
     private var secondDiamondLayer = CAShapeLayer()
@@ -17,11 +17,6 @@ class DiamondSpinner: Spinner {
     
     override func didMoveToWindow() {
         super.didMoveToWindow()
-        
-        firstDiamondLayer.fillColor = UIColor.lightBlue.cgColor
-        firstDiamondLayer.strokeColor = UIColor.lightBlue.cgColor
-        secondDiamondLayer.fillColor = UIColor.lightBlue.cgColor
-        secondDiamondLayer.strokeColor = UIColor.lightBlue.cgColor
         
 //        diamondLayer.string = "1"
 //        rowReplicatorLayer.instanceGreenOffset = -1
@@ -39,6 +34,14 @@ class DiamondSpinner: Spinner {
         layer.addSublayer(secondReplicatorLayer)
         
         transform = CGAffineTransform(rotationAngle: .pi / 4)
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        firstDiamondLayer.fillColor = primaryColor.cgColor
+        firstDiamondLayer.strokeColor = primaryColor.cgColor
+        secondDiamondLayer.fillColor = primaryColor.cgColor
+        secondDiamondLayer.strokeColor = primaryColor.cgColor
     }
     
     override func layoutSubviews() {
@@ -63,7 +66,7 @@ class DiamondSpinner: Spinner {
     override func startLoading() {
         super.startLoading()
         
-        let totalDuration: Double = 8
+        let totalDuration: Double = 4
         let delayFactor = 0.2
 
         let effectiveDuration = (1 - delayFactor) * totalDuration
@@ -71,18 +74,18 @@ class DiamondSpinner: Spinner {
         
         secondDiamondLayer.opacity = 0
         
-        let opacity = CABasicAnimation(keyPath: "opacity")
-        opacity.fromValue = 1
-        opacity.toValue = 0
-        opacity.fillMode = .forwards
-        opacity.duration = individualDuration
+        let fadeOutAnim = CABasicAnimation(keyPath: "opacity")
+        fadeOutAnim.fromValue = 1
+        fadeOutAnim.toValue = 0
+        fadeOutAnim.fillMode = .forwards
+        fadeOutAnim.duration = individualDuration
         
-        let fadeInWrapper = CAAnimationGroup()
-        fadeInWrapper.animations = [opacity]
-        fadeInWrapper.duration = effectiveDuration / 2
+        let fadeOutWrapper = CAAnimationGroup()
+        fadeOutWrapper.animations = [fadeOutAnim]
+        fadeOutWrapper.duration = effectiveDuration / 2
         
         let colorAnim = CAKeyframeAnimation(keyPath: "fillColor")
-        colorAnim.values = [UIColor.lightBlue.cgColor, UIColor.darkBlue.cgColor, UIColor.lightBlue.cgColor]
+        colorAnim.values = [primaryColor.cgColor, UIColor.darkBlue.cgColor, secondaryColor.cgColor]
         colorAnim.keyTimes = [0, 0.5, 1]
         colorAnim.duration = individualDuration
         
@@ -99,7 +102,7 @@ class DiamondSpinner: Spinner {
         secondReplicatorLayer.instanceDelay = individualDuration
         
         let firstAnimGroup = CAAnimationGroup()
-        firstAnimGroup.animations = [fadeInWrapper, rotateAnim, colorAnim]
+        firstAnimGroup.animations = [fadeOutWrapper, rotateAnim, colorAnim]
         firstAnimGroup.duration = totalDuration
         firstAnimGroup.repeatCount = .infinity
         
@@ -107,17 +110,17 @@ class DiamondSpinner: Spinner {
         
         let secondAnimGroup = CAAnimationGroup()
 
-        let fadeOutAnim = CABasicAnimation(keyPath: "opacity")
-        fadeOutAnim.fromValue = 0
-        fadeOutAnim.toValue = 1
-        fadeOutAnim.fillMode = .forwards
-        fadeOutAnim.duration = individualDuration
+        let fadeInAnim = CABasicAnimation(keyPath: "opacity")
+        fadeInAnim.fromValue = 0
+        fadeInAnim.toValue = 1
+        fadeInAnim.fillMode = .forwards
+        fadeInAnim.duration = individualDuration
         
-        let fadeOutWrapper = CAAnimationGroup()
-        fadeOutWrapper.animations = [fadeOutAnim]
-        fadeOutWrapper.duration = fadeInWrapper.duration
+        let fadeInWrapper = CAAnimationGroup()
+        fadeInWrapper.animations = [fadeInAnim]
+        fadeInWrapper.duration = fadeOutWrapper.duration
         
-        secondAnimGroup.animations = [fadeOutWrapper, rotateAnim, colorAnim]
+        secondAnimGroup.animations = [fadeInWrapper, rotateAnim, colorAnim]
         secondAnimGroup.duration = totalDuration
         secondAnimGroup.beginTime = CACurrentMediaTime() + effectiveDuration / 2
         secondAnimGroup.repeatCount = .infinity

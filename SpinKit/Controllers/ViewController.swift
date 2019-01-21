@@ -7,93 +7,98 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class ViewController: UIViewController {
 
     private var spinner: Spinner!
+    private var selectedColor: UIColor = UIColor.darkBlue
     
     private enum SpinnerType {
-        case square
-        case circles
-        case bars
-        case doubleSquare
-        case radar
-        case bubbles
-        case dots
-        case fancy
-        case decompose
-        case classic
-        case diamond
+        case rotatingPlane
+        case doubleBounce
+        case wave
+        case wanderingCubes
+        case pulse
+        case chasingDots
+        case threeBounce
+        case circle
+        case cubeGrid
+        case fadingCircle
+        case foldingCube
     }
     
-    @IBAction func didTapSquare(_ sender: UIButton) {
-        start(spinner: .square)
+    @IBAction func didTapRotatingPlane(_ sender: UIButton) {
+        start(spinner: .rotatingPlane)
     }
     
-    @IBAction func didTapCircles(_ sender: UIButton) {
-        start(spinner: .circles)
+    @IBAction func didTapDoubleBounce(_ sender: UIButton) {
+        start(spinner: .doubleBounce)
     }
     
-    @IBAction func didTapBars(_ sender: UIButton) {
-        start(spinner: .bars)
+    @IBAction func didTapWave(_ sender: UIButton) {
+        start(spinner: .wave)
     }
     
-    @IBAction func didTapDoubleSquare(_ sender: UIButton) {
-        start(spinner: .doubleSquare)
+    @IBAction func didTapWanderingCubes(_ sender: UIButton) {
+        start(spinner: .wanderingCubes)
     }
     
-    @IBAction func didTapRadar(_ sender: UIButton) {
-        start(spinner: .radar)
+    @IBAction func didTapPulse(_ sender: UIButton) {
+        start(spinner: .pulse)
     }
     
-    @IBAction func didTapBubbles(_ sender: UIButton) {
-        start(spinner: .bubbles)
+    @IBAction func didTapChasingDots(_ sender: UIButton) {
+        start(spinner: .chasingDots)
     }
     
-    @IBAction func didTapDots(_ sender: UIButton) {
-        start(spinner: .dots)
+    @IBAction func didTapThreeBounce(_ sender: UIButton) {
+        start(spinner: .threeBounce)
     }
     
-    @IBAction func didTapFancy(_ sender: UIButton) {
-        start(spinner: .fancy)
+    @IBAction func didTapCircle(_ sender: UIButton) {
+        start(spinner: .circle)
     }
     
-    @IBAction func didTapDecompose(_ sender: UIButton) {
-        start(spinner: .decompose)
+    @IBAction func didTapCubeGrid(_ sender: UIButton) {
+        start(spinner: .cubeGrid)
     }
     
-    @IBAction func didTapClassic(_ sender: UIButton) {
-        start(spinner: .classic)
+    @IBAction func didTapFadingCircle(_ sender: UIButton) {
+        start(spinner: .fadingCircle)
     }
     
-    @IBAction func didTapDiamond(_ sender: UIButton) {
-        start(spinner: .diamond)
+    @IBAction func didTapFoldingCube(_ sender: UIButton) {
+        start(spinner: .foldingCube)
     }
+    
     private func start(spinner type: SpinnerType) {
         spinner?.removeFromSuperview()
         switch type {
-        case .square:
-            spinner = SquareFlipSpinner()
-        case .circles:
-            spinner = CirclesSpinner()
-        case .bars:
-            spinner = BarSpinner()
-        case .doubleSquare:
-            spinner = DoubleSquareSpinner()
-        case .radar:
-            spinner = RadarSpinner()
-        case .bubbles:
-            spinner = BubblesSpinner()
-        case .dots:
-            spinner = DotsSpinner()
-        case .fancy:
-            spinner = FancySpinner()
-        case .decompose:
-            spinner = DecomposeSpinner()
-        case .classic:
-            spinner = ClassicSpinner()
-        case .diamond:
-            spinner = DiamondSpinner()
+        case .rotatingPlane:
+            spinner = RotatingPlaneSpinner(primaryColor: selectedColor)
+        case .doubleBounce:
+            spinner = DoubleBounceSpinner(primaryColor: selectedColor,
+                                          secondaryColor: selectedColor.darken(byPercentage: 0.5))
+        case .wave:
+            spinner = WaveSpinner(primaryColor: selectedColor)
+        case .wanderingCubes:
+            spinner = WanderingCubes(primaryColor: selectedColor)
+        case .pulse:
+            spinner = PulseSpinner(primaryColor: selectedColor)
+        case .chasingDots:
+            spinner = ChasingDotsSpinner(primaryColor: selectedColor)
+        case .threeBounce:
+            spinner = ThreeBounceSpinner(primaryColor: selectedColor)
+        case .circle:
+            spinner = CircleSpinner(primaryColor: selectedColor)
+        case .cubeGrid:
+            spinner = CubeGridSpinner(primaryColor: selectedColor)
+        case .fadingCircle:
+            spinner = FadingCircleSpinner(primaryColor: selectedColor)
+        case .foldingCube:
+            spinner = FoldingCubeSpinner(primaryColor: selectedColor,
+                                         secondaryColor: selectedColor.darken(byPercentage: 0.5))
         }
         
         spinner.translatesAutoresizingMaskIntoConstraints = false
@@ -110,5 +115,17 @@ class ViewController: UIViewController {
         spinner.layoutIfNeeded()
         spinner.startLoading()
     }
+    
+    @IBAction func didTapColor(_ sender: UIButton) {
+        guard let color = sender.backgroundColor else { return }
+        spinner.primaryColor = color
+        selectedColor = color
+        
+        if let spinner = self.spinner as? DoubleColorSpinner {
+            spinner.secondaryColor = color.darken(byPercentage: 0.5)
+        }
+        
+    }
+    
 }
 

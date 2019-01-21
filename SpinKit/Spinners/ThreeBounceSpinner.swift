@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DotsSpinner: Spinner {
+class ThreeBounceSpinner: Spinner {
 
     private var circleLayer = CAShapeLayer()
     private var circlesReplicatorLayer = CAReplicatorLayer()
@@ -16,11 +16,15 @@ class DotsSpinner: Spinner {
     override func didMoveToWindow() {
         super.didMoveToWindow()
         
-        circleLayer.fillColor = UIColor.darkBlue.cgColor
         circlesReplicatorLayer.instanceCount = 3
         
         circlesReplicatorLayer.addSublayer(circleLayer)
         layer.addSublayer(circlesReplicatorLayer)
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        circleLayer.fillColor = primaryColor.cgColor
     }
     
     override func layoutSubviews() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BubblesSpinner: Spinner {
+class ChasingDotsSpinner: Spinner {
 
     private var leftCircleLayer = CAShapeLayer()
     private var rightCircleLayer = CAShapeLayer()
@@ -16,13 +16,14 @@ class BubblesSpinner: Spinner {
     override func didMoveToWindow() {
         super.didMoveToWindow()
         
-        leftCircleLayer.fillColor = UIColor.darkBlue.cgColor
-        rightCircleLayer.fillColor = UIColor.darkBlue.cgColor
-        
         layer.addSublayer(rightCircleLayer)
         layer.addSublayer(leftCircleLayer)
-        clipsToBounds = false
-        layer.masksToBounds = false
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        leftCircleLayer.fillColor = primaryColor.cgColor
+        rightCircleLayer.fillColor = primaryColor.cgColor
     }
     
     override func layoutSubviews() {

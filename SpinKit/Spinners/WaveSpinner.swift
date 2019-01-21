@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BarSpinner: Spinner {
+class WaveSpinner: Spinner {
     
     private var barLayer = CAShapeLayer()
     private var barsReplicantLayer = CAReplicatorLayer()
@@ -16,12 +16,15 @@ class BarSpinner: Spinner {
     override func didMoveToWindow() {
         super.didMoveToWindow()
         
-        barLayer.fillColor = UIColor.darkBlue.cgColor
-        
         barsReplicantLayer.addSublayer(barLayer)
         layer.addSublayer(barsReplicantLayer)
         
         barsReplicantLayer.instanceCount = 5
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        barLayer.fillColor = primaryColor.cgColor
     }
     
     override func layoutSubviews() {

@@ -24,24 +24,24 @@
                     <rect key="frame" x="16" y="84" width="343" height="30"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56b-gS-wWY">
-                            <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
-                            <state key="normal" title="Square"/>
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                            <state key="normal" title="Rotating Plane"/>
                             <connections>
-                                <action selector="didTapSquare:" destination="-1" eventType="touchUpInside" id="d6z-AL-hoE"/>
+                                <action selector="didTapRotatingPlane:" destination="-1" eventType="touchUpInside" id="0rA-s5-N9A"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J90-qS-pfw">
-                            <rect key="frame" x="152.5" y="0.0" width="47" height="30"/>
-                            <state key="normal" title="Circles"/>
+                            <rect key="frame" x="136.5" y="0.0" width="101" height="30"/>
+                            <state key="normal" title="DoubleBounce"/>
                             <connections>
-                                <action selector="didTapCircles:" destination="-1" eventType="touchUpInside" id="eEp-g2-OMP"/>
+                                <action selector="didTapDoubleBounce:" destination="-1" eventType="touchUpInside" id="zTH-gL-46s"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1A-mR-1fr">
-                            <rect key="frame" x="312" y="0.0" width="31" height="30"/>
-                            <state key="normal" title="Bars"/>
+                            <rect key="frame" x="305" y="0.0" width="38" height="30"/>
+                            <state key="normal" title="Wave"/>
                             <connections>
-                                <action selector="didTapBars:" destination="-1" eventType="touchUpInside" id="laB-1Y-KeZ"/>
+                                <action selector="didTapWave:" destination="-1" eventType="touchUpInside" id="zpJ-BS-qeV"/>
                             </connections>
                         </button>
                     </subviews>
@@ -49,25 +49,25 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tvt-6D-2Bf">
                     <rect key="frame" x="16" y="114" width="343" height="30"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtB-XD-mSo" userLabel="Double Square">
-                            <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
-                            <state key="normal" title="2 Square"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtB-XD-mSo" userLabel="Wandering cubes">
+                            <rect key="frame" x="0.0" y="0.0" width="122" height="30"/>
+                            <state key="normal" title="Wandering Cubes"/>
                             <connections>
-                                <action selector="didTapDoubleSquare:" destination="-1" eventType="touchUpInside" id="aUR-UG-lSL"/>
+                                <action selector="didTapWanderingCubes:" destination="-1" eventType="touchUpInside" id="e1i-Yj-sGg"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pe-HE-cuw">
-                            <rect key="frame" x="152.5" y="0.0" width="41" height="30"/>
-                            <state key="normal" title="Radar"/>
+                            <rect key="frame" x="160" y="0.0" width="38" height="30"/>
+                            <state key="normal" title="Pulse"/>
                             <connections>
-                                <action selector="didTapRadar:" destination="-1" eventType="touchUpInside" id="krO-FO-3FN"/>
+                                <action selector="didTapPulse:" destination="-1" eventType="touchUpInside" id="Ms6-zO-A3A"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bno-tR-EWM">
-                            <rect key="frame" x="287" y="0.0" width="56" height="30"/>
-                            <state key="normal" title="Bubbles"/>
+                            <rect key="frame" x="251" y="0.0" width="92" height="30"/>
+                            <state key="normal" title="Chasing Dots"/>
                             <connections>
-                                <action selector="didTapBubbles:" destination="-1" eventType="touchUpInside" id="YZ8-mW-kg6"/>
+                                <action selector="didTapChasingDots:" destination="-1" eventType="touchUpInside" id="sYG-Yb-cz9"/>
                             </connections>
                         </button>
                     </subviews>
@@ -75,25 +75,25 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kKC-Sd-aXi">
                     <rect key="frame" x="16" y="144" width="343" height="30"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgo-Bi-Rul" userLabel="Double Square">
-                            <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
-                            <state key="normal" title="Dots"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgo-Bi-Rul">
+                            <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
+                            <state key="normal" title="Three Bounce"/>
                             <connections>
-                                <action selector="didTapDots:" destination="-1" eventType="touchUpInside" id="ep1-vd-csu"/>
+                                <action selector="didTapThreeBounce:" destination="-1" eventType="touchUpInside" id="tbO-eo-BRT"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXs-jQ-Tn1">
-                            <rect key="frame" x="138.5" y="0.0" width="41" height="30"/>
-                            <state key="normal" title="Fancy"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXs-jQ-Tn1" userLabel="Circle">
+                            <rect key="frame" x="159" y="0.0" width="40" height="30"/>
+                            <state key="normal" title="Circle"/>
                             <connections>
-                                <action selector="didTapFancy:" destination="-1" eventType="touchUpInside" id="bht-02-A5N"/>
+                                <action selector="didTapCircle:" destination="-1" eventType="touchUpInside" id="GLT-bC-ynD"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmt-aK-JSz">
-                            <rect key="frame" x="260" y="0.0" width="83" height="30"/>
-                            <state key="normal" title="Decompose"/>
+                            <rect key="frame" x="277" y="0.0" width="66" height="30"/>
+                            <state key="normal" title="CubeGrid"/>
                             <connections>
-                                <action selector="didTapDecompose:" destination="-1" eventType="touchUpInside" id="uf8-UN-6Te"/>
+                                <action selector="didTapCubeGrid:" destination="-1" eventType="touchUpInside" id="CcN-FB-qfl"/>
                             </connections>
                         </button>
                     </subviews>
@@ -102,17 +102,50 @@
                     <rect key="frame" x="16" y="174" width="343" height="30"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHR-5E-qeP">
-                            <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
-                            <state key="normal" title="Classic"/>
+                            <rect key="frame" x="0.0" y="0.0" width="89" height="30"/>
+                            <state key="normal" title="Fading Circle"/>
                             <connections>
-                                <action selector="didTapClassic:" destination="-1" eventType="touchUpInside" id="mZt-dd-7NJ"/>
+                                <action selector="didTapFadingCircle:" destination="-1" eventType="touchUpInside" id="14C-yP-W4F"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZ3-Nz-gvQ">
-                            <rect key="frame" x="281" y="0.0" width="62" height="30"/>
-                            <state key="normal" title="Diamond"/>
+                            <rect key="frame" x="252" y="0.0" width="91" height="30"/>
+                            <state key="normal" title="Folding Cube"/>
                             <connections>
-                                <action selector="didTapDiamond:" destination="-1" eventType="touchUpInside" id="MzJ-5f-nO7"/>
+                                <action selector="didTapFoldingCube:" destination="-1" eventType="touchUpInside" id="jLu-ah-nW7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yIv-gF-EFS">
+                    <rect key="frame" x="16" y="621" width="343" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctt-wB-Zf4">
+                            <rect key="frame" x="0.0" y="0.0" width="78.5" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.099608964565270242" blue="0.038464150361733895" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="didTapColor:" destination="-1" eventType="touchUpInside" id="LHC-c7-4bA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ina-BD-oOC">
+                            <rect key="frame" x="88.5" y="0.0" width="78" height="30"/>
+                            <color key="backgroundColor" red="0.90662666510000001" green="1" blue="0.1317668743" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="didTapColor:" destination="-1" eventType="touchUpInside" id="9bF-Ze-TMc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWr-en-GE1">
+                            <rect key="frame" x="176.5" y="0.0" width="78.5" height="30"/>
+                            <color key="backgroundColor" red="0.14468983779370881" green="0.31559414981656209" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="didTapColor:" destination="-1" eventType="touchUpInside" id="4hY-kj-AIV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOX-Z6-AGA">
+                            <rect key="frame" x="265" y="0.0" width="78" height="30"/>
+                            <color key="backgroundColor" red="0.1195359172811522" green="1" blue="0.15418402692374644" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="didTapColor:" destination="-1" eventType="touchUpInside" id="Cr9-m0-6h5"/>
                             </connections>
                         </button>
                     </subviews>
@@ -123,12 +156,15 @@
                 <constraint firstItem="qPo-MJ-7fu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="6bK-AN-B3h"/>
                 <constraint firstItem="tdS-Zt-86L" firstAttribute="trailing" secondItem="kKC-Sd-aXi" secondAttribute="trailing" id="7or-us-Zh0"/>
                 <constraint firstItem="kKC-Sd-aXi" firstAttribute="leading" secondItem="Tvt-6D-2Bf" secondAttribute="leading" id="8LN-lz-iDC"/>
+                <constraint firstItem="yIv-gF-EFS" firstAttribute="trailing" secondItem="tdS-Zt-86L" secondAttribute="trailing" id="A1m-1c-ora"/>
+                <constraint firstItem="yIv-gF-EFS" firstAttribute="leading" secondItem="tdS-Zt-86L" secondAttribute="leading" id="Haz-vb-dK6"/>
                 <constraint firstItem="kKC-Sd-aXi" firstAttribute="trailing" secondItem="Tvt-6D-2Bf" secondAttribute="trailing" id="MlM-by-Yop"/>
                 <constraint firstItem="kKC-Sd-aXi" firstAttribute="top" secondItem="Tvt-6D-2Bf" secondAttribute="bottom" id="UEA-1x-7UT"/>
                 <constraint firstItem="qPo-MJ-7fu" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="YUJ-ei-UPz"/>
                 <constraint firstItem="tdS-Zt-86L" firstAttribute="leading" secondItem="kKC-Sd-aXi" secondAttribute="leading" id="Zm7-QO-HoG"/>
                 <constraint firstItem="tdS-Zt-86L" firstAttribute="top" secondItem="kKC-Sd-aXi" secondAttribute="bottom" id="po2-DV-wMI"/>
                 <constraint firstItem="Tvt-6D-2Bf" firstAttribute="trailing" secondItem="qPo-MJ-7fu" secondAttribute="trailing" id="r4Y-ZQ-Gdn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="yIv-gF-EFS" secondAttribute="bottom" constant="16" id="rJk-XZ-54q"/>
                 <constraint firstItem="Tvt-6D-2Bf" firstAttribute="top" secondItem="qPo-MJ-7fu" secondAttribute="bottom" id="rz9-yX-efp"/>
                 <constraint firstItem="qPo-MJ-7fu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="64" id="ueO-ZS-UQ6"/>
                 <constraint firstItem="Tvt-6D-2Bf" firstAttribute="leading" secondItem="qPo-MJ-7fu" secondAttribute="leading" id="ybL-KT-kzv"/>

@@ -7,27 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20D257D001B51D3C26F7DA16 /* Pods_SpinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8DD52A4C8859CD7AAE7616 /* Pods_SpinKit.framework */; };
 		B00AB9EA21EF3D8B00FC9FBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AB9E921EF3D8B00FC9FBD /* AppDelegate.swift */; };
 		B00AB9EC21EF3D8B00FC9FBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AB9EB21EF3D8B00FC9FBD /* ViewController.swift */; };
 		B00AB9F121EF3D8C00FC9FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00AB9F021EF3D8C00FC9FBD /* Assets.xcassets */; };
 		B00AB9F421EF3D8C00FC9FBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00AB9F221EF3D8C00FC9FBD /* LaunchScreen.storyboard */; };
 		B00AB9FC21EF3F1700FC9FBD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B00AB9FB21EF3F1700FC9FBD /* ViewController.xib */; };
-		B00ABA0021EF41AD00FC9FBD /* SquareFlipSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AB9FF21EF41AD00FC9FBD /* SquareFlipSpinner.swift */; };
-		B00ABA0221EF86D000FC9FBD /* CirclesSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ABA0121EF86D000FC9FBD /* CirclesSpinner.swift */; };
+		B00ABA0021EF41AD00FC9FBD /* RotatingPlaneSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AB9FF21EF41AD00FC9FBD /* RotatingPlaneSpinner.swift */; };
+		B00ABA0221EF86D000FC9FBD /* DoubleBounceSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ABA0121EF86D000FC9FBD /* DoubleBounceSpinner.swift */; };
 		B00ABA0421EF87AA00FC9FBD /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ABA0321EF87AA00FC9FBD /* Spinner.swift */; };
 		B00ABA0621EF87C700FC9FBD /* UIColor+Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ABA0521EF87C700FC9FBD /* UIColor+Spinner.swift */; };
-		B00ABA0921EF927A00FC9FBD /* BarSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ABA0821EF927A00FC9FBD /* BarSpinner.swift */; };
-		B0BF426B21F0779B003FC841 /* DoubleSquareSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF426A21F0779B003FC841 /* DoubleSquareSpinner.swift */; };
-		B0BF426D21F088EF003FC841 /* RadarSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF426C21F088EF003FC841 /* RadarSpinner.swift */; };
-		B0BF426F21F08CEC003FC841 /* BubblesSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF426E21F08CEC003FC841 /* BubblesSpinner.swift */; };
-		B0BF427121F0A4AB003FC841 /* DotsSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427021F0A4AB003FC841 /* DotsSpinner.swift */; };
-		B0BF427321F0CE25003FC841 /* FancySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427221F0CE25003FC841 /* FancySpinner.swift */; };
-		B0BF427521F0FDCB003FC841 /* DecomposeSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427421F0FDCB003FC841 /* DecomposeSpinner.swift */; };
-		B0BF427721F108E5003FC841 /* ClassicSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427621F108E5003FC841 /* ClassicSpinner.swift */; };
-		B0BF427921F10BAE003FC841 /* DiamondSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427821F10BAE003FC841 /* DiamondSpinner.swift */; };
+		B00ABA0921EF927A00FC9FBD /* WaveSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ABA0821EF927A00FC9FBD /* WaveSpinner.swift */; };
+		B0BF426B21F0779B003FC841 /* WanderingCubes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF426A21F0779B003FC841 /* WanderingCubes.swift */; };
+		B0BF426D21F088EF003FC841 /* PulseSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF426C21F088EF003FC841 /* PulseSpinner.swift */; };
+		B0BF426F21F08CEC003FC841 /* ChasingDotsSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF426E21F08CEC003FC841 /* ChasingDotsSpinner.swift */; };
+		B0BF427121F0A4AB003FC841 /* ThreeBounceSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427021F0A4AB003FC841 /* ThreeBounceSpinner.swift */; };
+		B0BF427321F0CE25003FC841 /* CircleSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427221F0CE25003FC841 /* CircleSpinner.swift */; };
+		B0BF427521F0FDCB003FC841 /* CubeGridSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427421F0FDCB003FC841 /* CubeGridSpinner.swift */; };
+		B0BF427721F108E5003FC841 /* FadingCircleSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427621F108E5003FC841 /* FadingCircleSpinner.swift */; };
+		B0BF427921F10BAE003FC841 /* FoldingCubeSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF427821F10BAE003FC841 /* FoldingCubeSpinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D8DD52A4C8859CD7AAE7616 /* Pods_SpinKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpinKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FA6C758D1C93E9992BA1FF0 /* Pods-SpinKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpinKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpinKit/Pods-SpinKit.debug.xcconfig"; sourceTree = "<group>"; };
+		AA19E3D7356D635A66F6D693 /* Pods-SpinKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpinKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpinKit/Pods-SpinKit.release.xcconfig"; sourceTree = "<group>"; };
 		B00AB9E621EF3D8B00FC9FBD /* SpinKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpinKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00AB9E921EF3D8B00FC9FBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B00AB9EB21EF3D8B00FC9FBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,19 +39,19 @@
 		B00AB9F321EF3D8C00FC9FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B00AB9F521EF3D8C00FC9FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B00AB9FB21EF3F1700FC9FBD /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		B00AB9FF21EF41AD00FC9FBD /* SquareFlipSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareFlipSpinner.swift; sourceTree = "<group>"; };
-		B00ABA0121EF86D000FC9FBD /* CirclesSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesSpinner.swift; sourceTree = "<group>"; };
+		B00AB9FF21EF41AD00FC9FBD /* RotatingPlaneSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingPlaneSpinner.swift; sourceTree = "<group>"; };
+		B00ABA0121EF86D000FC9FBD /* DoubleBounceSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleBounceSpinner.swift; sourceTree = "<group>"; };
 		B00ABA0321EF87AA00FC9FBD /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		B00ABA0521EF87C700FC9FBD /* UIColor+Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Spinner.swift"; sourceTree = "<group>"; };
-		B00ABA0821EF927A00FC9FBD /* BarSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarSpinner.swift; sourceTree = "<group>"; };
-		B0BF426A21F0779B003FC841 /* DoubleSquareSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleSquareSpinner.swift; sourceTree = "<group>"; };
-		B0BF426C21F088EF003FC841 /* RadarSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarSpinner.swift; sourceTree = "<group>"; };
-		B0BF426E21F08CEC003FC841 /* BubblesSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesSpinner.swift; sourceTree = "<group>"; };
-		B0BF427021F0A4AB003FC841 /* DotsSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsSpinner.swift; sourceTree = "<group>"; };
-		B0BF427221F0CE25003FC841 /* FancySpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancySpinner.swift; sourceTree = "<group>"; };
-		B0BF427421F0FDCB003FC841 /* DecomposeSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecomposeSpinner.swift; sourceTree = "<group>"; };
-		B0BF427621F108E5003FC841 /* ClassicSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicSpinner.swift; sourceTree = "<group>"; };
-		B0BF427821F10BAE003FC841 /* DiamondSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiamondSpinner.swift; sourceTree = "<group>"; };
+		B00ABA0821EF927A00FC9FBD /* WaveSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveSpinner.swift; sourceTree = "<group>"; };
+		B0BF426A21F0779B003FC841 /* WanderingCubes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderingCubes.swift; sourceTree = "<group>"; };
+		B0BF426C21F088EF003FC841 /* PulseSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseSpinner.swift; sourceTree = "<group>"; };
+		B0BF426E21F08CEC003FC841 /* ChasingDotsSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChasingDotsSpinner.swift; sourceTree = "<group>"; };
+		B0BF427021F0A4AB003FC841 /* ThreeBounceSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeBounceSpinner.swift; sourceTree = "<group>"; };
+		B0BF427221F0CE25003FC841 /* CircleSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSpinner.swift; sourceTree = "<group>"; };
+		B0BF427421F0FDCB003FC841 /* CubeGridSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeGridSpinner.swift; sourceTree = "<group>"; };
+		B0BF427621F108E5003FC841 /* FadingCircleSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingCircleSpinner.swift; sourceTree = "<group>"; };
+		B0BF427821F10BAE003FC841 /* FoldingCubeSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldingCubeSpinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +59,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D257D001B51D3C26F7DA16 /* Pods_SpinKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BC0867A8E6A8CB6A02E31CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D8DD52A4C8859CD7AAE7616 /* Pods_SpinKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B00AB9DD21EF3D8B00FC9FBD = {
 			isa = PBXGroup;
 			children = (
 				B00AB9E821EF3D8B00FC9FBD /* SpinKit */,
 				B00AB9E721EF3D8B00FC9FBD /* Products */,
+				D331BDAF9A3AD0D0D429F78E /* Pods */,
+				6BC0867A8E6A8CB6A02E31CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,17 +119,17 @@
 			isa = PBXGroup;
 			children = (
 				B00ABA0321EF87AA00FC9FBD /* Spinner.swift */,
-				B00AB9FF21EF41AD00FC9FBD /* SquareFlipSpinner.swift */,
-				B00ABA0121EF86D000FC9FBD /* CirclesSpinner.swift */,
-				B00ABA0821EF927A00FC9FBD /* BarSpinner.swift */,
-				B0BF426A21F0779B003FC841 /* DoubleSquareSpinner.swift */,
-				B0BF426C21F088EF003FC841 /* RadarSpinner.swift */,
-				B0BF426E21F08CEC003FC841 /* BubblesSpinner.swift */,
-				B0BF427021F0A4AB003FC841 /* DotsSpinner.swift */,
-				B0BF427221F0CE25003FC841 /* FancySpinner.swift */,
-				B0BF427421F0FDCB003FC841 /* DecomposeSpinner.swift */,
-				B0BF427621F108E5003FC841 /* ClassicSpinner.swift */,
-				B0BF427821F10BAE003FC841 /* DiamondSpinner.swift */,
+				B00AB9FF21EF41AD00FC9FBD /* RotatingPlaneSpinner.swift */,
+				B00ABA0121EF86D000FC9FBD /* DoubleBounceSpinner.swift */,
+				B00ABA0821EF927A00FC9FBD /* WaveSpinner.swift */,
+				B0BF426A21F0779B003FC841 /* WanderingCubes.swift */,
+				B0BF426C21F088EF003FC841 /* PulseSpinner.swift */,
+				B0BF426E21F08CEC003FC841 /* ChasingDotsSpinner.swift */,
+				B0BF427021F0A4AB003FC841 /* ThreeBounceSpinner.swift */,
+				B0BF427221F0CE25003FC841 /* CircleSpinner.swift */,
+				B0BF427421F0FDCB003FC841 /* CubeGridSpinner.swift */,
+				B0BF427621F108E5003FC841 /* FadingCircleSpinner.swift */,
+				B0BF427821F10BAE003FC841 /* FoldingCubeSpinner.swift */,
 			);
 			path = Spinners;
 			sourceTree = "<group>";
@@ -127,6 +142,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D331BDAF9A3AD0D0D429F78E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FA6C758D1C93E9992BA1FF0 /* Pods-SpinKit.debug.xcconfig */,
+				AA19E3D7356D635A66F6D693 /* Pods-SpinKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B00AB9F821EF3D8C00FC9FBD /* Build configuration list for PBXNativeTarget "SpinKit" */;
 			buildPhases = (
+				2505F66D448A8559FD599DE3 /* [CP] Check Pods Manifest.lock */,
 				B00AB9E221EF3D8B00FC9FBD /* Sources */,
 				B00AB9E321EF3D8B00FC9FBD /* Frameworks */,
 				B00AB9E421EF3D8B00FC9FBD /* Resources */,
+				A97F189601A80E1110F0F239 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,25 +219,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2505F66D448A8559FD599DE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpinKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A97F189601A80E1110F0F239 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SpinKit/Pods-SpinKit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpinKit/Pods-SpinKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B00AB9E221EF3D8B00FC9FBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0BF427921F10BAE003FC841 /* DiamondSpinner.swift in Sources */,
-				B0BF426B21F0779B003FC841 /* DoubleSquareSpinner.swift in Sources */,
-				B00ABA0921EF927A00FC9FBD /* BarSpinner.swift in Sources */,
+				B0BF427921F10BAE003FC841 /* FoldingCubeSpinner.swift in Sources */,
+				B0BF426B21F0779B003FC841 /* WanderingCubes.swift in Sources */,
+				B00ABA0921EF927A00FC9FBD /* WaveSpinner.swift in Sources */,
 				B00AB9EC21EF3D8B00FC9FBD /* ViewController.swift in Sources */,
-				B0BF427121F0A4AB003FC841 /* DotsSpinner.swift in Sources */,
-				B0BF427721F108E5003FC841 /* ClassicSpinner.swift in Sources */,
+				B0BF427121F0A4AB003FC841 /* ThreeBounceSpinner.swift in Sources */,
+				B0BF427721F108E5003FC841 /* FadingCircleSpinner.swift in Sources */,
 				B00ABA0621EF87C700FC9FBD /* UIColor+Spinner.swift in Sources */,
-				B0BF426D21F088EF003FC841 /* RadarSpinner.swift in Sources */,
-				B00ABA0021EF41AD00FC9FBD /* SquareFlipSpinner.swift in Sources */,
+				B0BF426D21F088EF003FC841 /* PulseSpinner.swift in Sources */,
+				B00ABA0021EF41AD00FC9FBD /* RotatingPlaneSpinner.swift in Sources */,
 				B00AB9EA21EF3D8B00FC9FBD /* AppDelegate.swift in Sources */,
-				B0BF426F21F08CEC003FC841 /* BubblesSpinner.swift in Sources */,
-				B00ABA0221EF86D000FC9FBD /* CirclesSpinner.swift in Sources */,
-				B0BF427321F0CE25003FC841 /* FancySpinner.swift in Sources */,
-				B0BF427521F0FDCB003FC841 /* DecomposeSpinner.swift in Sources */,
+				B0BF426F21F08CEC003FC841 /* ChasingDotsSpinner.swift in Sources */,
+				B00ABA0221EF86D000FC9FBD /* DoubleBounceSpinner.swift in Sources */,
+				B0BF427321F0CE25003FC841 /* CircleSpinner.swift in Sources */,
+				B0BF427521F0FDCB003FC841 /* CubeGridSpinner.swift in Sources */,
 				B00ABA0421EF87AA00FC9FBD /* Spinner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +421,7 @@
 		};
 		B00AB9F921EF3D8C00FC9FBD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FA6C758D1C93E9992BA1FF0 /* Pods-SpinKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +440,7 @@
 		};
 		B00AB9FA21EF3D8C00FC9FBD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA19E3D7356D635A66F6D693 /* Pods-SpinKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

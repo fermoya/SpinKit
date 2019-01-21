@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FancySpinner: Spinner {
+class CircleSpinner: Spinner {
 
     var circleLayers = [CAShapeLayer]()
     
@@ -17,11 +17,15 @@ class FancySpinner: Spinner {
         
         (0..<16).forEach { _ in
             let circleLayer = CAShapeLayer()
-            circleLayer.fillColor = UIColor.darkBlue.cgColor
             circleLayers.append(circleLayer)
             layer.addSublayer(circleLayer)
         }
 
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        circleLayers.forEach { $0.fillColor = primaryColor.cgColor }
     }
     
     override func layoutSubviews() {

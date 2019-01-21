@@ -8,17 +8,23 @@
 
 import UIKit
 
-class RadarSpinner: Spinner {
+class PulseSpinner: Spinner {
     
     override func didMoveToWindow() {
         super.didMoveToWindow()
         transform = CGAffineTransform(scaleX: 0, y: 0)
-        backgroundColor = UIColor.darkBlue
+        layer.masksToBounds = true
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = bounds.width / 2
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        primaryColor.setFill()
+        UIRectFill(rect)
     }
 
     override func startLoading() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DoubleSquareSpinner: Spinner {
+class WanderingCubes: Spinner {
     
     private var leftSquareLayer = CAShapeLayer()
     private var rightSquareLayer = CAShapeLayer()
@@ -16,11 +16,15 @@ class DoubleSquareSpinner: Spinner {
     override func didMoveToWindow() {
         super.didMoveToWindow()
         
-        leftSquareLayer.fillColor = UIColor.darkBlue.cgColor
-        rightSquareLayer.fillColor = UIColor.darkBlue.cgColor
-        
         layer.addSublayer(leftSquareLayer)
         layer.addSublayer(rightSquareLayer)
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        leftSquareLayer.fillColor = primaryColor.cgColor
+        rightSquareLayer.fillColor = primaryColor.cgColor
     }
     
     override func layoutSubviews() {

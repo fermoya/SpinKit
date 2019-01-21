@@ -8,19 +8,23 @@
 
 import UIKit
 
-class CirclesSpinner: Spinner {
+class DoubleBounceSpinner: DoubleColorSpinner {
 
     private var outterCircleLayer = CAShapeLayer()
     private var innerCircleLayer = CAShapeLayer()
     
     override func didMoveToWindow() {
         super.didMoveToWindow()
-        
-        outterCircleLayer.fillColor = UIColor.lightBlue.cgColor
-        innerCircleLayer.fillColor = UIColor.darkBlue.cgColor
 
         layer.addSublayer(outterCircleLayer)
         layer.addSublayer(innerCircleLayer)
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        outterCircleLayer.fillColor = primaryColor.cgColor
+        innerCircleLayer.fillColor = secondaryColor.cgColor
     }
     
     override func layoutSubviews() {
