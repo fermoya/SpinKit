@@ -51,7 +51,7 @@ public class WaveSpinner: Spinner {
         let anim = CAKeyframeAnimation(keyPath: "transform.scale.y")
         anim.values = [0.4, 1]
         anim.keyTimes = [0.5, 1]
-        anim.duration = 0.5
+        anim.duration = 0.5 / animationSpeed
         anim.autoreverses = true
         anim.repeatCount = .infinity
         anim.fillMode = CAMediaTimingFillMode.backwards

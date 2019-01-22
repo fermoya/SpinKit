@@ -67,7 +67,7 @@ public class CircleSpinner: Spinner {
         scaleAnim.autoreverses = true
         scaleAnim.fillMode = .backwards
         scaleAnim.timingFunction = .init(name: .easeOut)
-        scaleAnim.duration = 0.7
+        scaleAnim.duration = 0.7 / animationSpeed
         
         circleLayers.enumerated().forEach {
             scaleAnim.beginTime = CACurrentMediaTime() + 2 * Double($0.offset) * scaleAnim.duration / Double(circleLayers.count)

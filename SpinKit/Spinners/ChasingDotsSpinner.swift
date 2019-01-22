@@ -49,7 +49,7 @@ public class ChasingDotsSpinner: Spinner {
         scaleAnimation.fromValue = CATransform3DScale(CATransform3DIdentity, 0, 0, 1)
         scaleAnimation.toValue = CATransform3DIdentity
         scaleAnimation.repeatCount = .infinity
-        scaleAnimation.duration = 1.1
+        scaleAnimation.duration = 1.1 / animationSpeed
         scaleAnimation.fillMode = .backwards
         scaleAnimation.autoreverses = true
         scaleAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
@@ -60,7 +60,7 @@ public class ChasingDotsSpinner: Spinner {
                                                              size: CGSize(width: contentSize.width / 2, height: contentSize.height / 2))).cgPath
         positionAnimation.repeatCount = .infinity
         positionAnimation.fillMode = .backwards
-        positionAnimation.duration = 2
+        positionAnimation.duration = 2 / animationSpeed
         positionAnimation.calculationMode = .paced
         
         leftCircleLayer.add(positionAnimation, forKey: nil)

@@ -23,6 +23,9 @@ public protocol SpinnerType: class {
     
     /// Insets of the spinner
     var contentInsets: UIEdgeInsets { get set }
+    
+    /// Speed of the animation
+    var animationSpeed: Double { get set }
 }
 
 /**
@@ -35,6 +38,8 @@ public class Spinner: UIView, SpinnerType {
     public var isTranslucent: Bool = true { didSet { setNeedsDisplay() } }
     
     public var contentInsets: UIEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10) { didSet { setNeedsLayout() } }
+    
+    public var animationSpeed: Double = 1
     
     var contentSize: CGSize {
         let size = min(bounds.width - (contentInsets.left + contentInsets.right),

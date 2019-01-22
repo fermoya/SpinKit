@@ -79,7 +79,7 @@ public class FoldingCubeSpinner: DoubleColorSpinner {
     override public func startLoading() {
         super.startLoading()
         
-        let totalDuration: Double = 4
+        let totalDuration: Double =  4 / animationSpeed
         let delayFactor = 0.2
 
         let effectiveDuration = (1 - delayFactor) * totalDuration

@@ -16,14 +16,14 @@ public class FadingCircleSpinner: CircleSpinner {
     override public func startLoading() {
         layoutIfNeeded()
         
-        let scaleAnim = CABasicAnimation(keyPath: "opacity")
-        scaleAnim.fromValue = 0
-        scaleAnim.toValue = 1
+        let scaleAnim = CAKeyframeAnimation(keyPath: "opacity")
+        scaleAnim.values = [0, 1]
+        scaleAnim.keyTimes = [0.33, 1]
         scaleAnim.repeatCount = .infinity
         scaleAnim.autoreverses = true
-        scaleAnim.fillMode = .backwards
+        scaleAnim.fillMode = .both
         scaleAnim.timingFunction = .init(name: .easeOut)
-        scaleAnim.duration = 0.7
+        scaleAnim.duration = 0.7 / animationSpeed
         
         circleLayers.enumerated().forEach {
             scaleAnim.beginTime = CACurrentMediaTime() + 2 * Double($0.offset) * scaleAnim.duration / Double(circleLayers.count)

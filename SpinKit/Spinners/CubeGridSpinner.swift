@@ -62,7 +62,7 @@ public class CubeGridSpinner: Spinner {
         scaleAnim.autoreverses = true
         scaleAnim.fillMode = .backwards
         scaleAnim.timingFunction = CAMediaTimingFunction(controlPoints: 0.83, 0, 0.26, 1.05)
-        scaleAnim.duration = 1
+        scaleAnim.duration = 1 / animationSpeed
         
         rowReplicatorLayer.instanceDelay = scaleAnim.duration / Double(rowReplicatorLayer.instanceCount) / 2
         replicatorLayer.instanceDelay = scaleAnim.duration / Double(replicatorLayer.instanceCount) / 2

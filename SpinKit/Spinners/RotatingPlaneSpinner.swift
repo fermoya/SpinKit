@@ -47,12 +47,12 @@ public class RotatingPlaneSpinner: Spinner {
         let rotation = CAKeyframeAnimation(keyPath: "transform")
         rotation.values = [CATransform3DIdentity, yTransform, zTransform]
         rotation.keyTimes = [0, 0.5, 1]
-        rotation.duration = 1
+        rotation.duration = 1 / animationSpeed
         
         let animGroup = CAAnimationGroup()
         animGroup.animations = [rotation]
         animGroup.repeatCount = .infinity
-        animGroup.duration = 1.2
+        animGroup.duration = 1.2 * rotation.duration
         
         squareLayer.add(animGroup, forKey: nil)
     }

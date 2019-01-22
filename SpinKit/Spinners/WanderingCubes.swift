@@ -59,7 +59,7 @@ public class WanderingCubes: Spinner {
         scaleAnim.timingFunctions = rotateAnim.timingFunctions
         
         let animGroup = CAAnimationGroup()
-        animGroup.duration = 2.2
+        animGroup.duration = 2.2 / animationSpeed
         animGroup.repeatCount = .infinity
         
         // LEFT

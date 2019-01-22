@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var isTranslucentSwitch: UISwitch!
     @IBOutlet weak var widthSlider: UISlider!
     @IBOutlet weak var heightSlider: UISlider!
+    @IBOutlet weak var speedSlider: UISlider!
     
     private var availableSpace: CGSize {
         return CGSize(width: UIScreen.main.bounds.width,
@@ -34,6 +35,12 @@ class ViewController: UIViewController {
         heightSlider.maximumValue = Float(availableSpace.height)
         heightSlider.value = heightSlider.maximumValue / 2
         heightSlider.minimumValue = 0
+        
+        speedSlider.maximumValue = 4
+        speedSlider.value = 1
+        speedSlider.minimumValue = 0.25
+        
+        start(spinner: .rotatingPlane)
     }
     
     private enum SpinnerType {
@@ -48,6 +55,10 @@ class ViewController: UIViewController {
         case cubeGrid
         case fadingCircle
         case foldingCube
+    }
+    
+    @IBAction func speedSliderDidChange(_ sender: UISlider) {
+        spinner.animationSpeed = Double(sender.value)
     }
     
     @IBAction func widthSliderDidChange(_ sender: UISlider) {
@@ -148,8 +159,9 @@ class ViewController: UIViewController {
         spinner.addConstraints([height, width])
         view.addConstraints([top, centerX])
         
+        spinner.animationSpeed = Double(speedSlider.value)
         spinner.isTranslucent = isTranslucentSwitch.isOn
-        spinner.startLoading()
+        spinner.startLoading()        
     }
     
     @IBAction func didTapColor(_ sender: UIButton) {

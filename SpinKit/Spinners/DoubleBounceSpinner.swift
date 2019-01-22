@@ -48,7 +48,7 @@ public class DoubleBounceSpinner: DoubleColorSpinner {
         anim.fromValue = NSValue(caTransform3D: CATransform3DIdentity)
         anim.toValue =  NSValue(caTransform3D: CATransform3DScale(CATransform3DIdentity, 0.5, 0.5, 1))
         anim.timingFunction = CAMediaTimingFunction(name: .easeIn)
-        anim.duration = 0.4
+        anim.duration = 0.4 / animationSpeed
         anim.autoreverses = true
         anim.repeatCount = .infinity
         

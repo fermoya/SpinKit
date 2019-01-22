@@ -40,19 +40,19 @@ public class PulseSpinner: Spinner {
         let opacityAnim = CABasicAnimation(keyPath: "opacity")
         opacityAnim.fromValue = 1
         opacityAnim.toValue = 0
-        opacityAnim.duration = 1
+        opacityAnim.duration = 1 / animationSpeed
         opacityAnim.fillMode = .forwards
         
         let scaleAnim = CABasicAnimation(keyPath: "transform.scale")
         scaleAnim.fromValue = 0
         scaleAnim.toValue = 1
-        scaleAnim.duration = 1
+        scaleAnim.duration = 1 / animationSpeed
         
         let animGroup = CAAnimationGroup()
         animGroup.animations = [opacityAnim, scaleAnim]
         animGroup.repeatCount = .infinity
         animGroup.timingFunction = CAMediaTimingFunction(name: .easeOut)
-        animGroup.duration = 1.2
+        animGroup.duration = 1.2 / animationSpeed
         
         pulseLayer.add(animGroup, forKey: nil)
     }

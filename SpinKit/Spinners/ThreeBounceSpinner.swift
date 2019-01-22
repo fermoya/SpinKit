@@ -50,7 +50,7 @@ public class ThreeBounceSpinner: Spinner {
         scaleAnim.repeatCount = .infinity
         scaleAnim.fillMode = .backwards
         scaleAnim.timingFunctions = [.init(name: .easeInEaseOut), .init(name: .easeInEaseOut), .init(name: .easeInEaseOut)]
-        scaleAnim.duration = 2
+        scaleAnim.duration = 2 / animationSpeed
         
         circlesReplicatorLayer.instanceDelay = scaleAnim.duration / Double(circlesReplicatorLayer.instanceCount) / 3
         circleLayer.add(scaleAnim, forKey: nil)
