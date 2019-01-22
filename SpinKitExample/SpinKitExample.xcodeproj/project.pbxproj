@@ -13,32 +13,7 @@
 		B09DE6FF21F760A70017C93C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B09DE6FE21F760A70017C93C /* Assets.xcassets */; };
 		B09DE70221F760A70017C93C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09DE70021F760A70017C93C /* LaunchScreen.storyboard */; };
 		B09DE70A21F761780017C93C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09DE70921F761780017C93C /* ViewController.xib */; };
-		B09DE71421F761A70017C93C /* SpinKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B09DE71221F761A70017C93C /* SpinKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B09DE71721F761A70017C93C /* SpinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09DE71021F761A70017C93C /* SpinKit.framework */; };
-		B09DE71821F761A70017C93C /* SpinKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B09DE71021F761A70017C93C /* SpinKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B09DE72921F761C30017C93C /* WaveSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE71D21F761C20017C93C /* WaveSpinner.swift */; };
-		B09DE72A21F761C30017C93C /* FoldingCubeSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE71E21F761C20017C93C /* FoldingCubeSpinner.swift */; };
-		B09DE72B21F761C30017C93C /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE71F21F761C20017C93C /* Spinner.swift */; };
-		B09DE72C21F761C30017C93C /* PulseSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72021F761C20017C93C /* PulseSpinner.swift */; };
-		B09DE72D21F761C30017C93C /* FadingCircleSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72121F761C30017C93C /* FadingCircleSpinner.swift */; };
-		B09DE72E21F761C30017C93C /* CubeGridSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72221F761C30017C93C /* CubeGridSpinner.swift */; };
-		B09DE72F21F761C30017C93C /* DoubleBounceSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72321F761C30017C93C /* DoubleBounceSpinner.swift */; };
-		B09DE73021F761C30017C93C /* CircleSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72421F761C30017C93C /* CircleSpinner.swift */; };
-		B09DE73121F761C30017C93C /* ChasingDotsSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72521F761C30017C93C /* ChasingDotsSpinner.swift */; };
-		B09DE73221F761C30017C93C /* RotatingPlaneSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72621F761C30017C93C /* RotatingPlaneSpinner.swift */; };
-		B09DE73321F761C30017C93C /* ThreeBounceSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72721F761C30017C93C /* ThreeBounceSpinner.swift */; };
-		B09DE73421F761C30017C93C /* WanderingCubesSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72821F761C30017C93C /* WanderingCubesSpinner.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B09DE71521F761A70017C93C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B09DE6EC21F760A60017C93C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B09DE70F21F761A70017C93C;
-			remoteInfo = SpinKit;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B09DE71C21F761A70017C93C /* Embed Frameworks */ = {
@@ -47,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B09DE71821F761A70017C93C /* SpinKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,21 +37,6 @@
 		B09DE70121F760A70017C93C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B09DE70321F760A70017C93C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B09DE70921F761780017C93C /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		B09DE71021F761A70017C93C /* SpinKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpinKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B09DE71221F761A70017C93C /* SpinKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpinKit.h; sourceTree = "<group>"; };
-		B09DE71321F761A70017C93C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B09DE71D21F761C20017C93C /* WaveSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveSpinner.swift; sourceTree = "<group>"; };
-		B09DE71E21F761C20017C93C /* FoldingCubeSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCubeSpinner.swift; sourceTree = "<group>"; };
-		B09DE71F21F761C20017C93C /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
-		B09DE72021F761C20017C93C /* PulseSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseSpinner.swift; sourceTree = "<group>"; };
-		B09DE72121F761C30017C93C /* FadingCircleSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadingCircleSpinner.swift; sourceTree = "<group>"; };
-		B09DE72221F761C30017C93C /* CubeGridSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeGridSpinner.swift; sourceTree = "<group>"; };
-		B09DE72321F761C30017C93C /* DoubleBounceSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleBounceSpinner.swift; sourceTree = "<group>"; };
-		B09DE72421F761C30017C93C /* CircleSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleSpinner.swift; sourceTree = "<group>"; };
-		B09DE72521F761C30017C93C /* ChasingDotsSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChasingDotsSpinner.swift; sourceTree = "<group>"; };
-		B09DE72621F761C30017C93C /* RotatingPlaneSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingPlaneSpinner.swift; sourceTree = "<group>"; };
-		B09DE72721F761C30017C93C /* ThreeBounceSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeBounceSpinner.swift; sourceTree = "<group>"; };
-		B09DE72821F761C30017C93C /* WanderingCubesSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WanderingCubesSpinner.swift; sourceTree = "<group>"; };
 		BA1643D0613AFC91453D55BE /* Pods-SpinKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpinKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpinKitExample/Pods-SpinKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		C380925AC0D3089583CF3493 /* Pods-SpinKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpinKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpinKitExample/Pods-SpinKitExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,14 +47,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				088ED90AFD19F4B928611CF5 /* Pods_SpinKitExample.framework in Frameworks */,
-				B09DE71721F761A70017C93C /* SpinKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B09DE70D21F761A70017C93C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				B09DE6F621F760A60017C93C /* SpinKitExample */,
-				B09DE71121F761A70017C93C /* SpinKit */,
 				B09DE6F521F760A60017C93C /* Products */,
 				237DC65BD33B095694C49213 /* Pods */,
 				FA0B36323CC3AC3F551C3B17 /* Frameworks */,
@@ -126,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				B09DE6F421F760A60017C93C /* SpinKitExample.app */,
-				B09DE71021F761A70017C93C /* SpinKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,27 +93,6 @@
 			path = SpinKitExample;
 			sourceTree = "<group>";
 		};
-		B09DE71121F761A70017C93C /* SpinKit */ = {
-			isa = PBXGroup;
-			children = (
-				B09DE71221F761A70017C93C /* SpinKit.h */,
-				B09DE71321F761A70017C93C /* Info.plist */,
-				B09DE71F21F761C20017C93C /* Spinner.swift */,
-				B09DE72521F761C30017C93C /* ChasingDotsSpinner.swift */,
-				B09DE72421F761C30017C93C /* CircleSpinner.swift */,
-				B09DE72221F761C30017C93C /* CubeGridSpinner.swift */,
-				B09DE72321F761C30017C93C /* DoubleBounceSpinner.swift */,
-				B09DE72121F761C30017C93C /* FadingCircleSpinner.swift */,
-				B09DE71E21F761C20017C93C /* FoldingCubeSpinner.swift */,
-				B09DE72021F761C20017C93C /* PulseSpinner.swift */,
-				B09DE72621F761C30017C93C /* RotatingPlaneSpinner.swift */,
-				B09DE72721F761C30017C93C /* ThreeBounceSpinner.swift */,
-				B09DE72821F761C30017C93C /* WanderingCubesSpinner.swift */,
-				B09DE71D21F761C20017C93C /* WaveSpinner.swift */,
-			);
-			path = SpinKit;
-			sourceTree = "<group>";
-		};
 		FA0B36323CC3AC3F551C3B17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,17 +102,6 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		B09DE70B21F761A70017C93C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B09DE71421F761A70017C93C /* SpinKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		B09DE6F321F760A60017C93C /* SpinKitExample */ = {
@@ -201,30 +118,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				B09DE71621F761A70017C93C /* PBXTargetDependency */,
 			);
 			name = SpinKitExample;
 			productName = SpinKitExample;
 			productReference = B09DE6F421F760A60017C93C /* SpinKitExample.app */;
 			productType = "com.apple.product-type.application";
-		};
-		B09DE70F21F761A70017C93C /* SpinKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B09DE71921F761A70017C93C /* Build configuration list for PBXNativeTarget "SpinKit" */;
-			buildPhases = (
-				B09DE70B21F761A70017C93C /* Headers */,
-				B09DE70C21F761A70017C93C /* Sources */,
-				B09DE70D21F761A70017C93C /* Frameworks */,
-				B09DE70E21F761A70017C93C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SpinKit;
-			productName = SpinKit;
-			productReference = B09DE71021F761A70017C93C /* SpinKit.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -238,10 +136,6 @@
 				TargetAttributes = {
 					B09DE6F321F760A60017C93C = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					B09DE70F21F761A70017C93C = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -259,7 +153,6 @@
 			projectRoot = "";
 			targets = (
 				B09DE6F321F760A60017C93C /* SpinKitExample */,
-				B09DE70F21F761A70017C93C /* SpinKit */,
 			);
 		};
 /* End PBXProject section */
@@ -272,13 +165,6 @@
 				B09DE70221F760A70017C93C /* LaunchScreen.storyboard in Resources */,
 				B09DE70A21F761780017C93C /* ViewController.xib in Resources */,
 				B09DE6FF21F760A70017C93C /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B09DE70E21F761A70017C93C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,12 +203,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SpinKitExample/Pods-SpinKitExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/SpinKitFramework/SpinKitFramework.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpinKitFramework.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -341,34 +229,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B09DE70C21F761A70017C93C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B09DE73421F761C30017C93C /* WanderingCubesSpinner.swift in Sources */,
-				B09DE73221F761C30017C93C /* RotatingPlaneSpinner.swift in Sources */,
-				B09DE72A21F761C30017C93C /* FoldingCubeSpinner.swift in Sources */,
-				B09DE72C21F761C30017C93C /* PulseSpinner.swift in Sources */,
-				B09DE72E21F761C30017C93C /* CubeGridSpinner.swift in Sources */,
-				B09DE73121F761C30017C93C /* ChasingDotsSpinner.swift in Sources */,
-				B09DE72F21F761C30017C93C /* DoubleBounceSpinner.swift in Sources */,
-				B09DE72B21F761C30017C93C /* Spinner.swift in Sources */,
-				B09DE72921F761C30017C93C /* WaveSpinner.swift in Sources */,
-				B09DE72D21F761C30017C93C /* FadingCircleSpinner.swift in Sources */,
-				B09DE73321F761C30017C93C /* ThreeBounceSpinner.swift in Sources */,
-				B09DE73021F761C30017C93C /* CircleSpinner.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B09DE71621F761A70017C93C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B09DE70F21F761A70017C93C /* SpinKit */;
-			targetProxy = B09DE71521F761A70017C93C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B09DE70021F760A70017C93C /* LaunchScreen.storyboard */ = {
@@ -540,67 +401,6 @@
 			};
 			name = Release;
 		};
-		B09DE71A21F761A70017C93C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FEQ2K94JRN;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SpinKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.spinkit.example.com.SpinKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B09DE71B21F761A70017C93C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FEQ2K94JRN;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SpinKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.spinkit.example.com.SpinKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -618,15 +418,6 @@
 			buildConfigurations = (
 				B09DE70721F760A70017C93C /* Debug */,
 				B09DE70821F760A70017C93C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B09DE71921F761A70017C93C /* Build configuration list for PBXNativeTarget "SpinKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B09DE71A21F761A70017C93C /* Debug */,
-				B09DE71B21F761A70017C93C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

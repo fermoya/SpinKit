@@ -2,17 +2,21 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - SpinKitFramework (1.0.0)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift
+  - SpinKitFramework
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ChameleonFramework
+    - SpinKitFramework
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  SpinKitFramework: 201c3d58c26c2d2f4408b19e3522f4ea374b1cc3
 
-PODFILE CHECKSUM: 71471df4a8412c3b74f90358c72f8bc00d827838
+PODFILE CHECKSUM: c6827e3014b1b8592f8e6f1761ef9ffdd08bbc76
 
 COCOAPODS: 1.5.3
