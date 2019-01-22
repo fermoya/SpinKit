@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		088ED90AFD19F4B928611CF5 /* Pods_SpinKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1FB5E9D76B25F2CEF26396 /* Pods_SpinKitExample.framework */; };
+		B09DE6F821F760A60017C93C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE6F721F760A60017C93C /* AppDelegate.swift */; };
+		B09DE6FA21F760A60017C93C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE6F921F760A60017C93C /* ViewController.swift */; };
+		B09DE6FF21F760A70017C93C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B09DE6FE21F760A70017C93C /* Assets.xcassets */; };
+		B09DE70221F760A70017C93C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09DE70021F760A70017C93C /* LaunchScreen.storyboard */; };
+		B09DE70A21F761780017C93C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09DE70921F761780017C93C /* ViewController.xib */; };
+		B09DE71421F761A70017C93C /* SpinKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B09DE71221F761A70017C93C /* SpinKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B09DE71721F761A70017C93C /* SpinKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09DE71021F761A70017C93C /* SpinKit.framework */; };
+		B09DE71821F761A70017C93C /* SpinKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B09DE71021F761A70017C93C /* SpinKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B09DE72921F761C30017C93C /* WaveSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE71D21F761C20017C93C /* WaveSpinner.swift */; };
+		B09DE72A21F761C30017C93C /* FoldingCubeSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE71E21F761C20017C93C /* FoldingCubeSpinner.swift */; };
+		B09DE72B21F761C30017C93C /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE71F21F761C20017C93C /* Spinner.swift */; };
+		B09DE72C21F761C30017C93C /* PulseSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72021F761C20017C93C /* PulseSpinner.swift */; };
+		B09DE72D21F761C30017C93C /* FadingCircleSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72121F761C30017C93C /* FadingCircleSpinner.swift */; };
+		B09DE72E21F761C30017C93C /* CubeGridSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72221F761C30017C93C /* CubeGridSpinner.swift */; };
+		B09DE72F21F761C30017C93C /* DoubleBounceSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72321F761C30017C93C /* DoubleBounceSpinner.swift */; };
+		B09DE73021F761C30017C93C /* CircleSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72421F761C30017C93C /* CircleSpinner.swift */; };
+		B09DE73121F761C30017C93C /* ChasingDotsSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72521F761C30017C93C /* ChasingDotsSpinner.swift */; };
+		B09DE73221F761C30017C93C /* RotatingPlaneSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72621F761C30017C93C /* RotatingPlaneSpinner.swift */; };
+		B09DE73321F761C30017C93C /* ThreeBounceSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72721F761C30017C93C /* ThreeBounceSpinner.swift */; };
+		B09DE73421F761C30017C93C /* WanderingCubes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72821F761C30017C93C /* WanderingCubes.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B09DE71521F761A70017C93C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B09DE6EC21F760A60017C93C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B09DE70F21F761A70017C93C;
+			remoteInfo = SpinKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B09DE71C21F761A70017C93C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B09DE71821F761A70017C93C /* SpinKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AE1FB5E9D76B25F2CEF26396 /* Pods_SpinKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpinKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B09DE6F421F760A60017C93C /* SpinKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpinKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B09DE6F721F760A60017C93C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B09DE6F921F760A60017C93C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B09DE6FE21F760A70017C93C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B09DE70121F760A70017C93C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B09DE70321F760A70017C93C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B09DE70921F761780017C93C /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		B09DE71021F761A70017C93C /* SpinKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpinKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B09DE71221F761A70017C93C /* SpinKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpinKit.h; sourceTree = "<group>"; };
+		B09DE71321F761A70017C93C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B09DE71D21F761C20017C93C /* WaveSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveSpinner.swift; sourceTree = "<group>"; };
+		B09DE71E21F761C20017C93C /* FoldingCubeSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCubeSpinner.swift; sourceTree = "<group>"; };
+		B09DE71F21F761C20017C93C /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		B09DE72021F761C20017C93C /* PulseSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseSpinner.swift; sourceTree = "<group>"; };
+		B09DE72121F761C30017C93C /* FadingCircleSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadingCircleSpinner.swift; sourceTree = "<group>"; };
+		B09DE72221F761C30017C93C /* CubeGridSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeGridSpinner.swift; sourceTree = "<group>"; };
+		B09DE72321F761C30017C93C /* DoubleBounceSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleBounceSpinner.swift; sourceTree = "<group>"; };
+		B09DE72421F761C30017C93C /* CircleSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleSpinner.swift; sourceTree = "<group>"; };
+		B09DE72521F761C30017C93C /* ChasingDotsSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChasingDotsSpinner.swift; sourceTree = "<group>"; };
+		B09DE72621F761C30017C93C /* RotatingPlaneSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingPlaneSpinner.swift; sourceTree = "<group>"; };
+		B09DE72721F761C30017C93C /* ThreeBounceSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeBounceSpinner.swift; sourceTree = "<group>"; };
+		B09DE72821F761C30017C93C /* WanderingCubes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WanderingCubes.swift; sourceTree = "<group>"; };
+		BA1643D0613AFC91453D55BE /* Pods-SpinKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpinKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpinKitExample/Pods-SpinKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		C380925AC0D3089583CF3493 /* Pods-SpinKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpinKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpinKitExample/Pods-SpinKitExample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B09DE6F121F760A60017C93C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				088ED90AFD19F4B928611CF5 /* Pods_SpinKitExample.framework in Frameworks */,
+				B09DE71721F761A70017C93C /* SpinKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B09DE70D21F761A70017C93C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		237DC65BD33B095694C49213 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA1643D0613AFC91453D55BE /* Pods-SpinKitExample.debug.xcconfig */,
+				C380925AC0D3089583CF3493 /* Pods-SpinKitExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B09DE6EB21F760A60017C93C = {
+			isa = PBXGroup;
+			children = (
+				B09DE6F621F760A60017C93C /* SpinKitExample */,
+				B09DE71121F761A70017C93C /* SpinKit */,
+				B09DE6F521F760A60017C93C /* Products */,
+				237DC65BD33B095694C49213 /* Pods */,
+				FA0B36323CC3AC3F551C3B17 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B09DE6F521F760A60017C93C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B09DE6F421F760A60017C93C /* SpinKitExample.app */,
+				B09DE71021F761A70017C93C /* SpinKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B09DE6F621F760A60017C93C /* SpinKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				B09DE6F721F760A60017C93C /* AppDelegate.swift */,
+				B09DE6F921F760A60017C93C /* ViewController.swift */,
+				B09DE70921F761780017C93C /* ViewController.xib */,
+				B09DE6FE21F760A70017C93C /* Assets.xcassets */,
+				B09DE70021F760A70017C93C /* LaunchScreen.storyboard */,
+				B09DE70321F760A70017C93C /* Info.plist */,
+			);
+			path = SpinKitExample;
+			sourceTree = "<group>";
+		};
+		B09DE71121F761A70017C93C /* SpinKit */ = {
+			isa = PBXGroup;
+			children = (
+				B09DE71221F761A70017C93C /* SpinKit.h */,
+				B09DE71321F761A70017C93C /* Info.plist */,
+				B09DE71F21F761C20017C93C /* Spinner.swift */,
+				B09DE72521F761C30017C93C /* ChasingDotsSpinner.swift */,
+				B09DE72421F761C30017C93C /* CircleSpinner.swift */,
+				B09DE72221F761C30017C93C /* CubeGridSpinner.swift */,
+				B09DE72321F761C30017C93C /* DoubleBounceSpinner.swift */,
+				B09DE72121F761C30017C93C /* FadingCircleSpinner.swift */,
+				B09DE71E21F761C20017C93C /* FoldingCubeSpinner.swift */,
+				B09DE72021F761C20017C93C /* PulseSpinner.swift */,
+				B09DE72621F761C30017C93C /* RotatingPlaneSpinner.swift */,
+				B09DE72721F761C30017C93C /* ThreeBounceSpinner.swift */,
+				B09DE72821F761C30017C93C /* WanderingCubes.swift */,
+				B09DE71D21F761C20017C93C /* WaveSpinner.swift */,
+			);
+			path = SpinKit;
+			sourceTree = "<group>";
+		};
+		FA0B36323CC3AC3F551C3B17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE1FB5E9D76B25F2CEF26396 /* Pods_SpinKitExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B09DE70B21F761A70017C93C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B09DE71421F761A70017C93C /* SpinKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B09DE6F321F760A60017C93C /* SpinKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B09DE70621F760A70017C93C /* Build configuration list for PBXNativeTarget "SpinKitExample" */;
+			buildPhases = (
+				41722DAB452A826A5623653B /* [CP] Check Pods Manifest.lock */,
+				B09DE6F021F760A60017C93C /* Sources */,
+				B09DE6F121F760A60017C93C /* Frameworks */,
+				B09DE6F221F760A60017C93C /* Resources */,
+				BC4F215FBBE5FAC7FAB7E942 /* [CP] Embed Pods Frameworks */,
+				B09DE71C21F761A70017C93C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B09DE71621F761A70017C93C /* PBXTargetDependency */,
+			);
+			name = SpinKitExample;
+			productName = SpinKitExample;
+			productReference = B09DE6F421F760A60017C93C /* SpinKitExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B09DE70F21F761A70017C93C /* SpinKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B09DE71921F761A70017C93C /* Build configuration list for PBXNativeTarget "SpinKit" */;
+			buildPhases = (
+				B09DE70B21F761A70017C93C /* Headers */,
+				B09DE70C21F761A70017C93C /* Sources */,
+				B09DE70D21F761A70017C93C /* Frameworks */,
+				B09DE70E21F761A70017C93C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpinKit;
+			productName = SpinKit;
+			productReference = B09DE71021F761A70017C93C /* SpinKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B09DE6EC21F760A60017C93C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Fernando Moya de Rivas";
+				TargetAttributes = {
+					B09DE6F321F760A60017C93C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					B09DE70F21F761A70017C93C = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+				};
+			};
+			buildConfigurationList = B09DE6EF21F760A60017C93C /* Build configuration list for PBXProject "SpinKitExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B09DE6EB21F760A60017C93C;
+			productRefGroup = B09DE6F521F760A60017C93C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B09DE6F321F760A60017C93C /* SpinKitExample */,
+				B09DE70F21F761A70017C93C /* SpinKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B09DE6F221F760A60017C93C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B09DE70221F760A70017C93C /* LaunchScreen.storyboard in Resources */,
+				B09DE70A21F761780017C93C /* ViewController.xib in Resources */,
+				B09DE6FF21F760A70017C93C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B09DE70E21F761A70017C93C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41722DAB452A826A5623653B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpinKitExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC4F215FBBE5FAC7FAB7E942 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SpinKitExample/Pods-SpinKitExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpinKitExample/Pods-SpinKitExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B09DE6F021F760A60017C93C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B09DE6FA21F760A60017C93C /* ViewController.swift in Sources */,
+				B09DE6F821F760A60017C93C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B09DE70C21F761A70017C93C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B09DE73421F761C30017C93C /* WanderingCubes.swift in Sources */,
+				B09DE73221F761C30017C93C /* RotatingPlaneSpinner.swift in Sources */,
+				B09DE72A21F761C30017C93C /* FoldingCubeSpinner.swift in Sources */,
+				B09DE72C21F761C30017C93C /* PulseSpinner.swift in Sources */,
+				B09DE72E21F761C30017C93C /* CubeGridSpinner.swift in Sources */,
+				B09DE73121F761C30017C93C /* ChasingDotsSpinner.swift in Sources */,
+				B09DE72F21F761C30017C93C /* DoubleBounceSpinner.swift in Sources */,
+				B09DE72B21F761C30017C93C /* Spinner.swift in Sources */,
+				B09DE72921F761C30017C93C /* WaveSpinner.swift in Sources */,
+				B09DE72D21F761C30017C93C /* FadingCircleSpinner.swift in Sources */,
+				B09DE73321F761C30017C93C /* ThreeBounceSpinner.swift in Sources */,
+				B09DE73021F761C30017C93C /* CircleSpinner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B09DE71621F761A70017C93C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B09DE70F21F761A70017C93C /* SpinKit */;
+			targetProxy = B09DE71521F761A70017C93C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B09DE70021F760A70017C93C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B09DE70121F760A70017C93C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B09DE70421F760A70017C93C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B09DE70521F760A70017C93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B09DE70721F760A70017C93C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA1643D0613AFC91453D55BE /* Pods-SpinKitExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FEQ2K94JRN;
+				INFOPLIST_FILE = SpinKitExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spinkit.example.com.SpinKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B09DE70821F760A70017C93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C380925AC0D3089583CF3493 /* Pods-SpinKitExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FEQ2K94JRN;
+				INFOPLIST_FILE = SpinKitExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spinkit.example.com.SpinKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B09DE71A21F761A70017C93C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FEQ2K94JRN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SpinKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spinkit.example.com.SpinKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B09DE71B21F761A70017C93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FEQ2K94JRN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SpinKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spinkit.example.com.SpinKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B09DE6EF21F760A60017C93C /* Build configuration list for PBXProject "SpinKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B09DE70421F760A70017C93C /* Debug */,
+				B09DE70521F760A70017C93C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B09DE70621F760A70017C93C /* Build configuration list for PBXNativeTarget "SpinKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B09DE70721F760A70017C93C /* Debug */,
+				B09DE70821F760A70017C93C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B09DE71921F761A70017C93C /* Build configuration list for PBXNativeTarget "SpinKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B09DE71A21F761A70017C93C /* Debug */,
+				B09DE71B21F761A70017C93C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B09DE6EC21F760A60017C93C /* Project object */;
+}
