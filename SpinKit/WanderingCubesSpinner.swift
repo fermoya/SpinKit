@@ -11,7 +11,8 @@ import UIKit
 /**
  Two rotating cubes following a square path.
  */
-public class WanderingCubes: Spinner {
+@IBDesignable
+public class WanderingCubesSpinner: Spinner {
     
     private var leftSquareLayer = CAShapeLayer()
     private var rightSquareLayer = CAShapeLayer()

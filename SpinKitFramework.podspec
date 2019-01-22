@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   This framework provides several spinners based on tobiasahlin. It lets you customize them to adjust your App needs.
                    DESC
 
-  s.homepage     = "https://www.linkedin.com/in/fernandomoyaderivas/"
+  s.homepage     = "https://github.com/fermoya"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "fermoya" => "fmdr.ct@gmail.com" }
 

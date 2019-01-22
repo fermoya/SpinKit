@@ -27,7 +27,7 @@
 		B09DE73121F761C30017C93C /* ChasingDotsSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72521F761C30017C93C /* ChasingDotsSpinner.swift */; };
 		B09DE73221F761C30017C93C /* RotatingPlaneSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72621F761C30017C93C /* RotatingPlaneSpinner.swift */; };
 		B09DE73321F761C30017C93C /* ThreeBounceSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72721F761C30017C93C /* ThreeBounceSpinner.swift */; };
-		B09DE73421F761C30017C93C /* WanderingCubes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72821F761C30017C93C /* WanderingCubes.swift */; };
+		B09DE73421F761C30017C93C /* WanderingCubesSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09DE72821F761C30017C93C /* WanderingCubesSpinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +77,7 @@
 		B09DE72521F761C30017C93C /* ChasingDotsSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChasingDotsSpinner.swift; sourceTree = "<group>"; };
 		B09DE72621F761C30017C93C /* RotatingPlaneSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingPlaneSpinner.swift; sourceTree = "<group>"; };
 		B09DE72721F761C30017C93C /* ThreeBounceSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeBounceSpinner.swift; sourceTree = "<group>"; };
-		B09DE72821F761C30017C93C /* WanderingCubes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WanderingCubes.swift; sourceTree = "<group>"; };
+		B09DE72821F761C30017C93C /* WanderingCubesSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WanderingCubesSpinner.swift; sourceTree = "<group>"; };
 		BA1643D0613AFC91453D55BE /* Pods-SpinKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpinKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpinKitExample/Pods-SpinKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		C380925AC0D3089583CF3493 /* Pods-SpinKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpinKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpinKitExample/Pods-SpinKitExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,7 +159,7 @@
 				B09DE72021F761C20017C93C /* PulseSpinner.swift */,
 				B09DE72621F761C30017C93C /* RotatingPlaneSpinner.swift */,
 				B09DE72721F761C30017C93C /* ThreeBounceSpinner.swift */,
-				B09DE72821F761C30017C93C /* WanderingCubes.swift */,
+				B09DE72821F761C30017C93C /* WanderingCubesSpinner.swift */,
 				B09DE71D21F761C20017C93C /* WaveSpinner.swift */,
 			);
 			path = SpinKit;
@@ -345,7 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B09DE73421F761C30017C93C /* WanderingCubes.swift in Sources */,
+				B09DE73421F761C30017C93C /* WanderingCubesSpinner.swift in Sources */,
 				B09DE73221F761C30017C93C /* RotatingPlaneSpinner.swift in Sources */,
 				B09DE72A21F761C30017C93C /* FoldingCubeSpinner.swift in Sources */,
 				B09DE72C21F761C30017C93C /* PulseSpinner.swift in Sources */,

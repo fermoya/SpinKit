@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="SpinKit" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="SpinKitExample" customModuleProvider="target">
             <connections>
                 <outlet property="heightSlider" destination="oHs-hm-GWg" id="4yA-FR-Bfg"/>
                 <outlet property="isTranslucentSwitch" destination="cR7-gL-pCY" id="DJk-ja-5Dp"/>

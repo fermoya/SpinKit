@@ -129,7 +129,7 @@ class ViewController: UIViewController {
         case .wave:
             spinner = WaveSpinner(primaryColor: selectedColor)
         case .wanderingCubes:
-            spinner = WanderingCubes(primaryColor: selectedColor)
+            spinner = WanderingCubesSpinner(primaryColor: selectedColor)
         case .pulse:
             spinner = PulseSpinner(primaryColor: selectedColor)
         case .chasingDots:
