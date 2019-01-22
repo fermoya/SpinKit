@@ -8,11 +8,14 @@
 
 import UIKit
 
-class CircleSpinner: Spinner {
+/**
+ Spinner composed by bouncing dots placed in a circle path.
+ */
+public class CircleSpinner: Spinner {
 
     var circleLayers = [CAShapeLayer]()
     
-    override func didMoveToWindow() {
+    override public func didMoveToWindow() {
         super.didMoveToWindow()
         
         (0..<16).forEach { _ in
@@ -23,23 +26,24 @@ class CircleSpinner: Spinner {
 
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
-        circleLayers.forEach { $0.fillColor = primaryColor.cgColor }
+        circleLayers.forEach { $0.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor }
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         let center = CGPoint(x: bounds.width / 2,
                              y: bounds.height / 2)
-        let radius = bounds.width / 2
+        let circleSize = CGSize(width: 0.7 * contentSize.width / CGFloat(circleLayers.count / 3),
+                                height: 0.7 * contentSize.height / CGFloat(circleLayers.count / 3))
+        let radius = (contentSize.width - circleSize.width) / 2
         circleLayers.enumerated().forEach { tupple in
             let layer = tupple.element
             let index = Double(tupple.offset)
             layer.path = UIBezierPath(ovalIn: CGRect(origin: .zero,
-                                                  size: CGSize(width: 0.8 * bounds.width / CGFloat(circleLayers.count / 3),
-                                                               height: 0.8 * bounds.height / CGFloat(circleLayers.count / 3)))).cgPath
+                                                  size: circleSize)).cgPath
             layer.bounds = layer.path!.boundingBox
             layer.position = CGPoint(x: center.x + radius * CGFloat(cos(index * Double.pi / 8)),
                                      y: center.y + radius * CGFloat(sin(index * Double.pi / 8)))
@@ -47,7 +51,7 @@ class CircleSpinner: Spinner {
         
     }
     
-    override func startLoading() {
+    override public func startLoading() {
         super.startLoading()
         
         let circleSize = circleLayers.first!.bounds.size

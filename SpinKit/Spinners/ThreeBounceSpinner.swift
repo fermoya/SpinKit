@@ -8,48 +8,45 @@
 
 import UIKit
 
-class ThreeBounceSpinner: Spinner {
+/**
+ Three bouncing dots placed horizontally.
+ */
+public class ThreeBounceSpinner: Spinner {
 
     private var circleLayer = CAShapeLayer()
     private var circlesReplicatorLayer = CAReplicatorLayer()
     
-    override func didMoveToWindow() {
+    override public func didMoveToWindow() {
         super.didMoveToWindow()
         
         circlesReplicatorLayer.instanceCount = 3
-        
         circlesReplicatorLayer.addSublayer(circleLayer)
         layer.addSublayer(circlesReplicatorLayer)
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
-        circleLayer.fillColor = primaryColor.cgColor
+        circleLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
-        circleLayer.path = UIBezierPath(ovalIn: CGRect(origin: CGPoint(x: bounds.width / 24, y: 0),
-                                                       size: CGSize(width: bounds.width / 4,
-                                                                    height: bounds.height / 4))).cgPath
-        circlesReplicatorLayer.instanceTransform = CATransform3DTranslate(CATransform3DIdentity, bounds.width / 3, 0, 0)
-        circlesReplicatorLayer.frame = CGRect(origin: CGPoint(x: 0,
-                                                              y: 3 * bounds.height / 8),
-                                              size: CGSize(width: bounds.width, height: bounds.height / 4))
+        circleLayer.path = UIBezierPath(ovalIn: CGRect(origin: .zero,
+                                                       size: CGSize(width: contentSize.width / 4,
+                                                                    height: contentSize.height / 4))).cgPath
+        circleLayer.frame = circleLayer.path!.boundingBox.applying(CGAffineTransform(translationX: contentSize.width / 32,
+                                                                                     y: 3 / 8 * contentSize.height))
+        circlesReplicatorLayer.instanceTransform = CATransform3DTranslate(CATransform3DIdentity, contentSize.width / 3, 0, 0)
+        circlesReplicatorLayer.frame = contentRect
     }
     
-    override func startLoading() {
+    override public func startLoading() {
         super.startLoading()
         
-        let transform = NSValue(caTransform3D: CATransform3DConcat(CATransform3DScale(CATransform3DIdentity, 0, 0, 1),
-                                                                   CATransform3DTranslate(CATransform3DIdentity,
-                                                                                          circlesReplicatorLayer.frame.height / 2,
-                                                                                          circlesReplicatorLayer.frame.height / 2, 0)))
-        
-        let scaleAnim = CAKeyframeAnimation(keyPath: "transform")
+        let scaleAnim = CAKeyframeAnimation(keyPath: "transform.scale")
         scaleAnim.keyTimes = [0, 0.4, 0.8]
-        scaleAnim.values = [transform, CATransform3DIdentity, transform]
+        scaleAnim.values = [0, 1, 0]
         scaleAnim.repeatCount = .infinity
         scaleAnim.fillMode = .backwards
         scaleAnim.timingFunctions = [.init(name: .easeInEaseOut), .init(name: .easeInEaseOut), .init(name: .easeInEaseOut)]

@@ -8,12 +8,15 @@
 
 import UIKit
 
-class WaveSpinner: Spinner {
+/**
+ Five vertical bars moving imitating a wave motion.
+ */
+public class WaveSpinner: Spinner {
     
     private var barLayer = CAShapeLayer()
     private var barsReplicantLayer = CAReplicatorLayer()
     
-    override func didMoveToWindow() {
+    override public func didMoveToWindow() {
         super.didMoveToWindow()
         
         barsReplicantLayer.addSublayer(barLayer)
@@ -22,27 +25,31 @@ class WaveSpinner: Spinner {
         barsReplicantLayer.instanceCount = 5
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
-        barLayer.fillColor = primaryColor.cgColor
+        barLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
-        let barRect = CGRect(x: 0, y: 0, width: bounds.width / 6, height: bounds.height)
+        let barRect = CGRect(origin: .zero,
+                             size: CGSize(width: contentSize.width / 6,
+                                          height: contentSize.height))
         barLayer.path = UIBezierPath(rect: barRect).cgPath
+        barLayer.bounds = barLayer.path!.boundingBox
+        barLayer.position = CGPoint(x: barRect.width / 2,
+                                    y: contentBounds.midY)
+        
         barsReplicantLayer.instanceTransform = CATransform3DTranslate(CATransform3DIdentity, CGFloat(barsReplicantLayer.instanceCount) * barRect.width / 4, 0, 0)
-        barsReplicantLayer.frame = barRect.applying(CGAffineTransform(scaleX: 6, y: 1))
+        barsReplicantLayer.frame = contentRect
     }
     
-    override func startLoading() {
+    override public func startLoading() {
         super.startLoading()
         
-        let anim = CAKeyframeAnimation(keyPath: "transform")
-        let transform = CATransform3DConcat(CATransform3DScale(CATransform3DIdentity, 1, 0.5, 0),
-                                            CATransform3DTranslate(CATransform3DIdentity, 0, bounds.height / 4, 0))
-        anim.values = [transform, CATransform3DIdentity]
+        let anim = CAKeyframeAnimation(keyPath: "transform.scale.y")
+        anim.values = [0.4, 1]
         anim.keyTimes = [0.5, 1]
         anim.duration = 0.5
         anim.autoreverses = true

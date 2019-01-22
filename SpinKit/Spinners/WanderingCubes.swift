@@ -8,40 +8,43 @@
 
 import UIKit
 
-class WanderingCubes: Spinner {
+/**
+ Two rotating cubes following a square path.
+ */
+public class WanderingCubes: Spinner {
     
     private var leftSquareLayer = CAShapeLayer()
     private var rightSquareLayer = CAShapeLayer()
     
-    override func didMoveToWindow() {
+    override public func didMoveToWindow() {
         super.didMoveToWindow()
         
         layer.addSublayer(leftSquareLayer)
         layer.addSublayer(rightSquareLayer)
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        leftSquareLayer.fillColor = primaryColor.cgColor
-        rightSquareLayer.fillColor = primaryColor.cgColor
+        leftSquareLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
+        rightSquareLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         let path = UIBezierPath(rect: CGRect(origin: .zero,
-                                             size: CGSize(width: bounds.width / 4, height: bounds.height / 4)))
+                                             size: CGSize(width: contentSize.width / 4, height: contentSize.height / 4)))
         leftSquareLayer.path = path.cgPath
-        leftSquareLayer.frame = CGRect(origin: .zero,
-                                       size: CGSize(width: bounds.width / 4,
-                                                    height: bounds.height / 4))
+        leftSquareLayer.frame = CGRect(origin: contentOrigin,
+                                       size: CGSize(width: contentSize.width / 4,
+                                                    height: contentSize.height / 4))
         
         rightSquareLayer.path = path.cgPath
-        rightSquareLayer.frame = leftSquareLayer.frame.applying(CGAffineTransform(translationX: 6 * bounds.width / 8, y: 6 * bounds.width / 8))
+        rightSquareLayer.frame = leftSquareLayer.frame.applying(CGAffineTransform(translationX: 6 * contentSize.width / 8, y: 6 * contentSize.width / 8))
     }
     
-    override func startLoading() {
+    override public func startLoading() {
         super.startLoading()
         
         // COMMON

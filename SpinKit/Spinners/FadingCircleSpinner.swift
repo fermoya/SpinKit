@@ -8,9 +8,14 @@
 
 import UIKit
 
-class FadingCircleSpinner: CircleSpinner {
+/**
+ Spinner composed by fading dots placed in a circle path.
+ */
+public class FadingCircleSpinner: CircleSpinner {
 
-    override func startLoading() {
+    override public func startLoading() {
+        layoutIfNeeded()
+        
         let scaleAnim = CABasicAnimation(keyPath: "opacity")
         scaleAnim.fromValue = 0
         scaleAnim.toValue = 1

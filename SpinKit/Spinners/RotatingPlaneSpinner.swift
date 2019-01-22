@@ -8,37 +8,53 @@
 
 import UIKit
 
-class RotatingPlaneSpinner: Spinner {
+/**
+ Square plane that rotates first through its Y-axis and then through its X-axis
+ */
+public class RotatingPlaneSpinner: Spinner {
     
-    override func didMoveToWindow() {
+    private var squareLayer = CAShapeLayer()
+        
+    override public func didMoveToWindow() {
         super.didMoveToWindow()
-        layer.shouldRasterize = true
-        layer.rasterizationScale = UIScreen.main.scale
+        squareLayer.shouldRasterize = true
+        squareLayer.rasterizationScale = UIScreen.main.scale
+        layer.addSublayer(squareLayer)
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
-        primaryColor.setFill()
-        UIRectFill(rect)
+        
+        squareLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
     }
     
-    override func startLoading() {
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        squareLayer.path = UIBezierPath(rect: contentBounds).cgPath
+        squareLayer.frame = contentRect
+    }
+    
+    override public func startLoading() {
         super.startLoading()
         
-        UIView.animateKeyframes(withDuration: 1.2, delay: 0, options: [.repeat], animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.4) { [weak self] in
-                var identity = CATransform3DIdentity
-                identity.m34 = -1.0/200
-                self?.layer.transform = CATransform3DRotate(identity, -.pi, 1.0, 0, 0)
-            }
-            
-            UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.4) { [weak self] in
-                var identity = CATransform3DIdentity
-                identity.m34 = -1.0/200
-                self?.layer.transform = CATransform3DRotate(identity, -.pi, 0.0, 0.0, 1.0)
-            }
-
-        })
+        var zTransform = CATransform3DRotate(CATransform3DIdentity, .pi, 0, 0, 1.0)
+        zTransform.m34 = -1.0/200
+        
+        var yTransform = CATransform3DRotate(CATransform3DIdentity, .pi, 1.0, 0, 0)
+        yTransform.m34 = -1.0/200
+        
+        let rotation = CAKeyframeAnimation(keyPath: "transform")
+        rotation.values = [CATransform3DIdentity, yTransform, zTransform]
+        rotation.keyTimes = [0, 0.5, 1]
+        rotation.duration = 1
+        
+        let animGroup = CAAnimationGroup()
+        animGroup.animations = [rotation]
+        animGroup.repeatCount = .infinity
+        animGroup.duration = 1.2
+        
+        squareLayer.add(animGroup, forKey: nil)
     }
     
 }

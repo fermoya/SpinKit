@@ -8,32 +8,53 @@
 
 import UIKit
 
-class PulseSpinner: Spinner {
+/**
+ Spinner that imitates a pulse in the water.
+ */
+public class PulseSpinner: Spinner {
     
-    override func didMoveToWindow() {
+    private var pulseLayer = CAShapeLayer()
+    
+    override public func didMoveToWindow() {
         super.didMoveToWindow()
-        transform = CGAffineTransform(scaleX: 0, y: 0)
-        layer.masksToBounds = true
+        pulseLayer.masksToBounds = true
+        layer.addSublayer(pulseLayer)
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = bounds.width / 2
+        
+        pulseLayer.frame = contentRect
+        pulseLayer.path = UIBezierPath(rect: contentBounds).cgPath
+        pulseLayer.cornerRadius = min(contentSize.width, contentSize.height) / 2
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
-        primaryColor.setFill()
-        UIRectFill(rect)
+        pulseLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
     }
 
-    override func startLoading() {
+    override public func startLoading() {
         super.startLoading()
         
-        UIView.animate(withDuration: 1, delay: 0, options: [.repeat, .curveEaseOut], animations: { [weak self] in
-            self?.alpha = 0
-            self?.transform = .identity
-        }, completion: nil)
+        let opacityAnim = CABasicAnimation(keyPath: "opacity")
+        opacityAnim.fromValue = 1
+        opacityAnim.toValue = 0
+        opacityAnim.duration = 1
+        opacityAnim.fillMode = .forwards
+        
+        let scaleAnim = CABasicAnimation(keyPath: "transform.scale")
+        scaleAnim.fromValue = 0
+        scaleAnim.toValue = 1
+        scaleAnim.duration = 1
+        
+        let animGroup = CAAnimationGroup()
+        animGroup.animations = [opacityAnim, scaleAnim]
+        animGroup.repeatCount = .infinity
+        animGroup.timingFunction = CAMediaTimingFunction(name: .easeOut)
+        animGroup.duration = 1.2
+        
+        pulseLayer.add(animGroup, forKey: nil)
     }
 
 }

@@ -8,46 +8,59 @@
 
 import UIKit
 
-class FoldingCubeSpinner: DoubleColorSpinner {
+/**
+ Rotated cube that folds over itself.
+ */
+public class FoldingCubeSpinner: DoubleColorSpinner {
     
     private var firstDiamondLayer = CAShapeLayer()
     private var secondDiamondLayer = CAShapeLayer()
     private var firstReplicatorLayer = CAReplicatorLayer()
     private var secondReplicatorLayer = CAReplicatorLayer()
     
-    override func didMoveToWindow() {
+    override var contentSize: CGSize {
+        let insets = (pow(contentInsets.top, 2) + pow(contentInsets.left, 2)).squareRoot()
+        let size = 0.7 * min(bounds.width - 2 * insets,
+                       bounds.height - 2 * insets)
+        return CGSize(width: size, height: size)
+    }
+
+    private var wrapper: UIView!
+    
+    override public func didMoveToWindow() {
         super.didMoveToWindow()
         
-//        diamondLayer.string = "1"
-//        rowReplicatorLayer.instanceGreenOffset = -1
-//        replicatorLayer.instanceRedOffset = -1
-//        replicatorLayer.instanceGreenOffset = -0.7
-//        replicatorLayer.instanceBlueOffset = -0.3
-        
+        wrapper = UIView()
         firstReplicatorLayer.instanceCount = 4
         firstReplicatorLayer.addSublayer(firstDiamondLayer)
         
         secondReplicatorLayer.instanceCount = 3
         secondReplicatorLayer.addSublayer(secondDiamondLayer)
         
-        layer.addSublayer(firstReplicatorLayer)
-        layer.addSublayer(secondReplicatorLayer)
+        wrapper.layer.addSublayer(firstReplicatorLayer)
+        wrapper.layer.addSublayer(secondReplicatorLayer)
         
-        transform = CGAffineTransform(rotationAngle: .pi / 4)
+        addSubview(wrapper)
+        wrapper.transform = CGAffineTransform(rotationAngle: .pi / 4)
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
-        firstDiamondLayer.fillColor = primaryColor.cgColor
-        firstDiamondLayer.strokeColor = primaryColor.cgColor
-        secondDiamondLayer.fillColor = primaryColor.cgColor
-        secondDiamondLayer.strokeColor = primaryColor.cgColor
+        firstDiamondLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
+        firstDiamondLayer.strokeColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
+        secondDiamondLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
+        secondDiamondLayer.strokeColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
-        let diamondFrame = bounds.applying(CGAffineTransform(scaleX: 0.5,
-                                                             y: 0.5))
+        let diamondFrame = contentBounds.applying(CGAffineTransform(scaleX: 0.5,
+                                                                    y: 0.5))
+        
+        wrapper.layer.bounds = contentBounds
+        wrapper.layer.position = CGPoint(x: bounds.width / 2,
+                                         y: bounds.height / 2)
+        
         firstDiamondLayer.frame = diamondFrame
         firstDiamondLayer.path = UIBezierPath(rect: diamondFrame).cgPath
         firstDiamondLayer.anchorPoint.x = 1
@@ -56,14 +69,14 @@ class FoldingCubeSpinner: DoubleColorSpinner {
         secondDiamondLayer.path = firstDiamondLayer.path
         secondDiamondLayer.anchorPoint.x = firstDiamondLayer.anchorPoint.x
         
-        firstReplicatorLayer.frame = bounds
-        secondReplicatorLayer.frame = bounds
+        firstReplicatorLayer.frame = contentBounds
+        secondReplicatorLayer.frame = contentBounds
 
         firstReplicatorLayer.instanceTransform = CATransform3DRotate(CATransform3DIdentity, .pi / 2, 0, 0, 1)
         secondReplicatorLayer.instanceTransform = firstReplicatorLayer.instanceTransform
     }
     
-    override func startLoading() {
+    override public func startLoading() {
         super.startLoading()
         
         let totalDuration: Double = 4
@@ -85,7 +98,9 @@ class FoldingCubeSpinner: DoubleColorSpinner {
         fadeOutWrapper.duration = effectiveDuration / 2
         
         let colorAnim = CAKeyframeAnimation(keyPath: "fillColor")
-        colorAnim.values = [primaryColor.cgColor, UIColor.darkBlue.cgColor, secondaryColor.cgColor]
+        colorAnim.values = [isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor,
+                            isTranslucent ? secondaryColor.cgColor : UIColor.lightGray.cgColor,
+                            isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor]
         colorAnim.keyTimes = [0, 0.5, 1]
         colorAnim.duration = individualDuration
         

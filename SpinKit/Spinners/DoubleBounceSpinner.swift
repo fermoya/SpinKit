@@ -8,39 +8,42 @@
 
 import UIKit
 
-class DoubleBounceSpinner: DoubleColorSpinner {
+/**
+ Two circles with the same center, one contained within the other one. They bounce when animated.
+ */
+public class DoubleBounceSpinner: DoubleColorSpinner {
 
     private var outterCircleLayer = CAShapeLayer()
     private var innerCircleLayer = CAShapeLayer()
     
-    override func didMoveToWindow() {
+    override public func didMoveToWindow() {
         super.didMoveToWindow()
 
         layer.addSublayer(outterCircleLayer)
         layer.addSublayer(innerCircleLayer)
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        outterCircleLayer.fillColor = primaryColor.cgColor
-        innerCircleLayer.fillColor = secondaryColor.cgColor
+        outterCircleLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
+        innerCircleLayer.fillColor = isTranslucent ? secondaryColor.cgColor : UIColor.lightGray.cgColor
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
-        outterCircleLayer.path = UIBezierPath(ovalIn: bounds).cgPath
-        outterCircleLayer.frame = bounds
+        outterCircleLayer.path = UIBezierPath(ovalIn: contentBounds).cgPath
+        outterCircleLayer.frame = contentRect
 
-        innerCircleLayer.path = UIBezierPath(ovalIn: bounds.applying(CGAffineTransform(scaleX: 0.5, y: 0.5))).cgPath
-        innerCircleLayer.frame = CGRect(x: bounds.width / 4,
-                                        y: bounds.height / 4,
-                                        width: bounds.width / 2,
-                                        height: bounds.height / 2)
+        innerCircleLayer.path = UIBezierPath(ovalIn: contentBounds.applying(CGAffineTransform(scaleX: 0.5, y: 0.5))).cgPath
+        innerCircleLayer.frame = CGRect(x: contentSize.width / 4 + contentOrigin.x,
+                                        y: contentSize.height / 4 + contentOrigin.y,
+                                        width: contentSize.width / 2,
+                                        height: contentSize.height / 2)
     }
     
-    override func startLoading() {
+    override public func startLoading() {
         let anim = CABasicAnimation(keyPath: "transform")
         anim.fromValue = NSValue(caTransform3D: CATransform3DIdentity)
         anim.toValue =  NSValue(caTransform3D: CATransform3DScale(CATransform3DIdentity, 0.5, 0.5, 1))

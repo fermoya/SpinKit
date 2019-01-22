@@ -14,6 +14,28 @@ class ViewController: UIViewController {
     private var spinner: Spinner!
     private var selectedColor: UIColor = UIColor.darkBlue
     
+    @IBOutlet weak var lastStackView: UIStackView!
+    @IBOutlet weak var isTranslucentSwitch: UISwitch!
+    @IBOutlet weak var widthSlider: UISlider!
+    @IBOutlet weak var heightSlider: UISlider!
+    
+    private var availableSpace: CGSize {
+        return CGSize(width: UIScreen.main.bounds.width,
+                      height: (isTranslucentSwitch.frame.origin.y) - (lastStackView.frame.origin.y + lastStackView.frame.height))
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        widthSlider.maximumValue = Float(availableSpace.width)
+        widthSlider.value = widthSlider.maximumValue / 2
+        widthSlider.minimumValue = 0
+        
+        heightSlider.maximumValue = Float(availableSpace.height)
+        heightSlider.value = heightSlider.maximumValue / 2
+        heightSlider.minimumValue = 0
+    }
+    
     private enum SpinnerType {
         case rotatingPlane
         case doubleBounce
@@ -26,6 +48,18 @@ class ViewController: UIViewController {
         case cubeGrid
         case fadingCircle
         case foldingCube
+    }
+    
+    @IBAction func widthSliderDidChange(_ sender: UISlider) {
+        spinner.constraints.first { $0.identifier == "width" }?.constant = CGFloat(sender.value)
+    }
+    
+    @IBAction func heightSliderDidChange(_ sender: UISlider) {
+        spinner.constraints.first { $0.identifier == "height" }?.constant = CGFloat(sender.value)
+    }
+    
+    @IBAction func switchDidTap(_ sender: UISwitch) {
+        spinner.isTranslucent = sender.isOn
     }
     
     @IBAction func didTapRotatingPlane(_ sender: UIButton) {
@@ -104,15 +138,17 @@ class ViewController: UIViewController {
         spinner.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(spinner)
         
+        let top = spinner.topAnchor.constraint(equalTo: lastStackView.bottomAnchor)
         let centerX = spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        let centerY = spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        let width = spinner.widthAnchor.constraint(equalToConstant: 100)
-        let height = spinner.heightAnchor.constraint(equalToConstant: 100)
+        let width = spinner.widthAnchor.constraint(equalToConstant: CGFloat(widthSlider.value))
+        width.identifier = "width"
+        let height = spinner.heightAnchor.constraint(equalToConstant: CGFloat(heightSlider.value))
+        height.identifier = "height"
         
         spinner.addConstraints([height, width])
-        view.addConstraints([centerX, centerY])
+        view.addConstraints([top, centerX])
         
-        spinner.layoutIfNeeded()
+        spinner.isTranslucent = isTranslucentSwitch.isOn
         spinner.startLoading()
     }
     

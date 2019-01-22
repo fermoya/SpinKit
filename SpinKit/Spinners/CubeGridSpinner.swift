@@ -8,17 +8,20 @@
 
 import UIKit
 
-class CubeGridSpinner: Spinner {
+/**
+ A cube composed by a grid of cubes. The animation splits up this cube and decomposes its parts.
+ */
+public class CubeGridSpinner: Spinner {
 
     private var squareLayer = CAShapeLayer()
     private var rowReplicatorLayer = CAReplicatorLayer()
     private var replicatorLayer = CAReplicatorLayer()
     
     private var squareRect: CGRect {
-        return bounds.applying(CGAffineTransform(scaleX: 1 / 3, y: 1 / 3))
+        return contentBounds.applying(CGAffineTransform(scaleX: 1 / 3, y: 1 / 3))
     }
     
-    override func didMoveToWindow() {
+    override public func didMoveToWindow() {
         super.didMoveToWindow()
         
         rowReplicatorLayer.instanceCount = 3
@@ -29,22 +32,22 @@ class CubeGridSpinner: Spinner {
         layer.addSublayer(replicatorLayer)
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
-        squareLayer.fillColor = primaryColor.cgColor
+        squareLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
         squareLayer.strokeColor = squareLayer.fillColor
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         squareLayer.path = UIBezierPath(rect: squareRect).cgPath
         rowReplicatorLayer.instanceTransform = CATransform3DTranslate(CATransform3DIdentity, squareRect.width, 0, 0)
         replicatorLayer.instanceTransform = CATransform3DTranslate(CATransform3DIdentity, 0, squareRect.height, 0)
-        replicatorLayer.frame = bounds
+        replicatorLayer.frame = contentRect
     }
     
-    override func startLoading() {
+    override public func startLoading() {
         super.startLoading()
         
         let transform = NSValue(caTransform3D: CATransform3DConcat(CATransform3DScale(CATransform3DIdentity, 0, 0, 1),

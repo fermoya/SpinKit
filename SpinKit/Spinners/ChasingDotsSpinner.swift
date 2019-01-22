@@ -8,38 +8,41 @@
 
 import UIKit
 
-class ChasingDotsSpinner: Spinner {
+/**
+ Two circle chasing each other in a circle path while growing and shrinking.
+ */
+public class ChasingDotsSpinner: Spinner {
 
     private var leftCircleLayer = CAShapeLayer()
     private var rightCircleLayer = CAShapeLayer()
     
-    override func didMoveToWindow() {
+    override public func didMoveToWindow() {
         super.didMoveToWindow()
         
         layer.addSublayer(rightCircleLayer)
         layer.addSublayer(leftCircleLayer)
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
-        leftCircleLayer.fillColor = primaryColor.cgColor
-        rightCircleLayer.fillColor = primaryColor.cgColor
+        leftCircleLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
+        rightCircleLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
-        let circleSize = CGSize(width: bounds.width / 2, height: bounds.height / 2)
-        leftCircleLayer.frame = CGRect(origin: .zero,
+        let circleSize = CGSize(width: contentSize.width / 2, height: contentSize.height / 2)
+        leftCircleLayer.frame = CGRect(origin: contentOrigin,
                                        size: circleSize)
         leftCircleLayer.path = UIBezierPath(ovalIn: CGRect(origin: .zero, size: circleSize)).cgPath
         
-        rightCircleLayer.frame = CGRect(origin: .zero,
+        rightCircleLayer.frame = CGRect(origin: contentOrigin,
                                         size: circleSize)
         rightCircleLayer.path = UIBezierPath(ovalIn: CGRect(origin: .zero, size: circleSize)).cgPath
     }
     
-    override func startLoading() {
+    override public func startLoading() {
         super.startLoading()
 
         let scaleAnimation = CABasicAnimation(keyPath: "transform")
@@ -52,9 +55,9 @@ class ChasingDotsSpinner: Spinner {
         scaleAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         
         let positionAnimation = CAKeyframeAnimation(keyPath: "position")
-        positionAnimation.path = UIBezierPath(ovalIn: CGRect(origin: CGPoint(x: bounds.width / 4 + leftCircleLayer.frame.size.width / 16,
-                                                                             y: bounds.height / 4 + leftCircleLayer.frame.size.height / 16),
-                                                             size: CGSize(width: bounds.width / 2, height: bounds.height / 2))).cgPath
+        positionAnimation.path = UIBezierPath(ovalIn: CGRect(origin: CGPoint(x: contentSize.width / 4 + leftCircleLayer.frame.size.width / 16 + contentOrigin.x,
+                                                                             y: contentSize.height / 4 + leftCircleLayer.frame.size.height / 16 + contentOrigin.y),
+                                                             size: CGSize(width: contentSize.width / 2, height: contentSize.height / 2))).cgPath
         positionAnimation.repeatCount = .infinity
         positionAnimation.fillMode = .backwards
         positionAnimation.duration = 2
