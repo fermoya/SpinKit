@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SpinKitFramework"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Beautiful spinners to let your user know your App have some heavy task to do."
 
   s.description  = <<-DESC

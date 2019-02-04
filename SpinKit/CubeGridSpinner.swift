@@ -14,61 +14,57 @@ import UIKit
 @IBDesignable
 public class CubeGridSpinner: Spinner {
 
-    private var squareLayer = CAShapeLayer()
-    private var rowReplicatorLayer = CAReplicatorLayer()
-    private var replicatorLayer = CAReplicatorLayer()
+    private var cubeLayer = CAShapeLayer()
+    private var cubeRowReplicatorLayer = CAReplicatorLayer()
+    private var gridReplicatorLayer = CAReplicatorLayer()
     
-    private var squareRect: CGRect {
+    private var cubeRect: CGRect {
         return contentBounds.applying(CGAffineTransform(scaleX: 1 / 3, y: 1 / 3))
     }
     
     override public func didMoveToWindow() {
         super.didMoveToWindow()
         
-        rowReplicatorLayer.instanceCount = 3
-        replicatorLayer.instanceCount = 3
+        cubeRowReplicatorLayer.instanceCount = 3
+        gridReplicatorLayer.instanceCount = 3
         
-        rowReplicatorLayer.addSublayer(squareLayer)
-        replicatorLayer.addSublayer(rowReplicatorLayer)
-        layer.addSublayer(replicatorLayer)
+        cubeRowReplicatorLayer.addSublayer(cubeLayer)
+        gridReplicatorLayer.addSublayer(cubeRowReplicatorLayer)
+        layer.addSublayer(gridReplicatorLayer)
     }
     
     override public func draw(_ rect: CGRect) {
         super.draw(rect)
-        squareLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
-        squareLayer.strokeColor = squareLayer.fillColor
+        cubeLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
+        cubeLayer.strokeColor = cubeLayer.fillColor
     }
     
     override public func layoutSubviews() {
         super.layoutSubviews()
         
-        squareLayer.path = UIBezierPath(rect: squareRect).cgPath
-        rowReplicatorLayer.instanceTransform = CATransform3DTranslate(CATransform3DIdentity, squareRect.width, 0, 0)
-        replicatorLayer.instanceTransform = CATransform3DTranslate(CATransform3DIdentity, 0, squareRect.height, 0)
-        replicatorLayer.frame = contentRect
+        cubeLayer.path = UIBezierPath(rect: cubeRect).cgPath
+        cubeLayer.frame = cubeRect
+        cubeRowReplicatorLayer.instanceTransform = CATransform3DTranslate(CATransform3DIdentity, cubeRect.width, 0, 0)
+        gridReplicatorLayer.instanceTransform = CATransform3DTranslate(CATransform3DIdentity, 0, cubeRect.height, 0)
+        gridReplicatorLayer.frame = contentRect
     }
     
     override public func startLoading() {
         super.startLoading()
         
-        let transform = NSValue(caTransform3D: CATransform3DConcat(CATransform3DScale(CATransform3DIdentity, 0, 0, 1),
-                                                                   CATransform3DTranslate(CATransform3DIdentity,
-                                                                                          squareRect.width / 2,
-                                                                                          squareRect.width / 2, 0)))
-        
-        let scaleAnim = CABasicAnimation(keyPath: "transform")
-        scaleAnim.fromValue = CATransform3DIdentity
-        scaleAnim.toValue = transform
+        let scaleAnim = CABasicAnimation(keyPath: "transform.scale")
+        scaleAnim.fromValue = 1
+        scaleAnim.toValue = 0
         scaleAnim.repeatCount = .infinity
         scaleAnim.autoreverses = true
         scaleAnim.fillMode = .backwards
         scaleAnim.timingFunction = CAMediaTimingFunction(controlPoints: 0.83, 0, 0.26, 1.05)
         scaleAnim.duration = 1 / animationSpeed
         
-        rowReplicatorLayer.instanceDelay = scaleAnim.duration / Double(rowReplicatorLayer.instanceCount) / 2
-        replicatorLayer.instanceDelay = scaleAnim.duration / Double(replicatorLayer.instanceCount) / 2
+        cubeRowReplicatorLayer.instanceDelay = scaleAnim.duration / Double(cubeRowReplicatorLayer.instanceCount) / 2
+        gridReplicatorLayer.instanceDelay = scaleAnim.duration / Double(gridReplicatorLayer.instanceCount) / 2
         
-        squareLayer.add(scaleAnim, forKey: nil)
+        cubeLayer.add(scaleAnim, forKey: nil)
     }
 
 }

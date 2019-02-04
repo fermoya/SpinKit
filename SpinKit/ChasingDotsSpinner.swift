@@ -46,9 +46,9 @@ public class ChasingDotsSpinner: Spinner {
     override public func startLoading() {
         super.startLoading()
 
-        let scaleAnimation = CABasicAnimation(keyPath: "transform")
-        scaleAnimation.fromValue = CATransform3DScale(CATransform3DIdentity, 0, 0, 1)
-        scaleAnimation.toValue = CATransform3DIdentity
+        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+        scaleAnimation.fromValue = 0
+        scaleAnimation.toValue = 1
         scaleAnimation.repeatCount = .infinity
         scaleAnimation.duration = 1.1 / animationSpeed
         scaleAnimation.fillMode = .backwards

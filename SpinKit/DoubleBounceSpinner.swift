@@ -14,28 +14,28 @@ import UIKit
 @IBDesignable
 public class DoubleBounceSpinner: DoubleColorSpinner {
 
-    private var outterCircleLayer = CAShapeLayer()
+    private var outerCircleLayer = CAShapeLayer()
     private var innerCircleLayer = CAShapeLayer()
     
     override public func didMoveToWindow() {
         super.didMoveToWindow()
 
-        layer.addSublayer(outterCircleLayer)
+        layer.addSublayer(outerCircleLayer)
         layer.addSublayer(innerCircleLayer)
     }
     
     override public func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        outterCircleLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
+        outerCircleLayer.fillColor = isTranslucent ? primaryColor.cgColor : UIColor.white.cgColor
         innerCircleLayer.fillColor = isTranslucent ? secondaryColor.cgColor : UIColor.lightGray.cgColor
     }
     
     override public func layoutSubviews() {
         super.layoutSubviews()
         
-        outterCircleLayer.path = UIBezierPath(ovalIn: contentBounds).cgPath
-        outterCircleLayer.frame = contentRect
+        outerCircleLayer.path = UIBezierPath(ovalIn: contentBounds).cgPath
+        outerCircleLayer.frame = contentRect
 
         innerCircleLayer.path = UIBezierPath(ovalIn: contentBounds.applying(CGAffineTransform(scaleX: 0.5, y: 0.5))).cgPath
         innerCircleLayer.frame = CGRect(x: contentSize.width / 4 + contentOrigin.x,
@@ -53,7 +53,7 @@ public class DoubleBounceSpinner: DoubleColorSpinner {
         anim.autoreverses = true
         anim.repeatCount = .infinity
         
-        outterCircleLayer.add(anim, forKey: nil)
+        outerCircleLayer.add(anim, forKey: nil)
         
         anim.fromValue =  0
         anim.toValue =  1

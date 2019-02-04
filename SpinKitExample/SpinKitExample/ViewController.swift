@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SpinKitFramework
+import SpinKit
 import ChameleonFramework
 
 class ViewController: UIViewController {

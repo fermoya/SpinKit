@@ -1,6 +1,0 @@
-framework module SpinKitFramework {
-  umbrella header "SpinKitFramework-umbrella.h"
-
-  export *
-  module * { export * }
-}
